@@ -5,5 +5,5 @@ r_github_packages:
   - rstudio/bookdown
 
 script:
-  - ./build.sh
-  - ./deploy.sh
+  - ./_build.sh
+  - ./_deploy.sh
