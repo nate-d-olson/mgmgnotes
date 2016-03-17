@@ -1,10 +1,11 @@
 language: r
 
+
 r_github_packages:
   - rstudio/bookdown
 
 script:
   - ./build.sh
-  -./deploy.sh
+  - ./deploy.sh
 
 
