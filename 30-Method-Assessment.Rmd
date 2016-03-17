@@ -9,16 +9,24 @@ Method steps
 
 ## Sample to fastq
 * Benchmarking  
-    - using _in vitro_ mock communities (e.g. cells, DNA, or PCR products)  
+    - using _in vitro_ mock communities (e.g. cells, DNA, or PCR products)   
     - technical replicates?  
     - well characterized benchmarking samples - similar to Genomic RMs (deep sequenced multiple methods)  
     - Mixture/ titrations  
     - Standard additions  
     - Dilution to extinction?  
+* Experimental design  
+  * @Brooks2015 generated 80 mock communities using different combinations of 7 bacterial strains generating mixtures of cells, DNA, and PCR products to characterize the contributions of different steps in the measurment process. Evalualted the results using the mixture effect model.
 
 ## Seq to OTU  
 ### Pre-processing  
-Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. http://doi.org/10.1371/journal.pcbi.1000844  
+* Single org samples
+  * Data sets from sequencing individual organisms using a standard 16S metagenomic pipeline had been used to evaluate sequencing errors and optimize filtering parameters.  
+    * @Kunin2010 evaluated the sequencing error rates and use of different filtering thresholds for 454 pyrosequencing of an _E. coli_ isolated.  
+Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. http://doi.org/10.1371/journal.pcbi.1000844
+
+* Multiple Org  
+  * @Schirmer2015 using a mock community of 59 strains (49 bacteria and 10 archaea) evaluated differnt sequence processing methods and parameters for read filtering and quality trimming, merging paired end reads, and error correction. Methods were evaluated based on error rate reduction.  
 
 Albanese, D., Fontana, P., De Filippo, C., Cavalieri, D., & Donati, C. (2015). MICCA: a complete and accurate software for taxonomic profiling of metagenomic data. Scientific Reports, 5, 9743. http://doi.org/10.1038/srep09743  
 * Evaluates preprocessing % read passing filtering, chimeras, and redundant OTUs, relative abundance  

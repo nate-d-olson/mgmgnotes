@@ -1,5 +1,6 @@
 # Measurement Process  
-Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues.    
+Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues. 
+See @Goodrich2014 for a review of 16S rRNA marker gene metagenomics measurement process and general recomendations for conducting a microbiome study.  
 
 Diagram of measurement process \@ref(fig:fishbone) .  
 ```{r fishbone, echo=FALSE, fig.cap="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process."}
@@ -48,6 +49,8 @@ The part consists of five main steps:
 1. Library Prep   
 1. Sequencing  
 
+* @Zhou2011 Used biological and technical replicates with a _Shewanella oneidenis MR-1_ to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the $\Beta$ diversity and relative abundance between replicates.  
+
 ### Sample Collection
 * Collection of sample that is representative of population being studied.  
   * Kitty Biome study as an example of sample heterogeneity.  
@@ -60,6 +63,8 @@ The part consists of five main steps:
   * Cell type specific extraction biases  
   * DNA concentration requirements for library prep  
   * Issues with low concentration samples - skin microbiome  
+  * Extra cellular DNA
+    * @Albertsen evalauted the impact of different DNA extraction methods for activated slude communities.  Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.
 * Additional DNA purification to remove PCR inhibitors.  
   * Old PCR inhibitor paper.  
   * Any studies showing inhibitors inducing biases in metagenomic studies?  
@@ -69,19 +74,29 @@ The part consists of five main steps:
 * Template concentration  
   * This is related to low concentration samples or samples with poor DNA extraction efficiencies.
   * @Kennedy2014 showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility. 
+  * @Amore2016 increasing the template concentration from 1 ng to 10 ng for MiSeq lead to higher percentages of chimeric reads 0.08 compared to 0.2% (p = 0.20).  
 * Target variable region  
+  * @Clooney2016 Compared sequencing data between platforms and variable regions. Based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the V12 and V45 primer regions, PGM sequencing data was less impacted than MiSeq to different variable regions.  
+  * @Kozich2013 compared the results for three different variable regions sequenced using the MiSeq platform. The three regions, V34, V4, and V45 represented different length (250 bp, 430 bp, and 375 bp) though overlapping target regions. The observed error rate varied between run as well as variable regions resulting in differences in predicted OTUs. V45 had the highest predicted OTUs for all samples and replicate sequencing runs, followed by V34 and V4. The number of observed OTUs was higher for all datasets than expected for the mock community datasets.  
 * PCR primers (optional barcoded primers) 
+  * @Albertsen performed both an _in silico_ and _in vitro_ comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets.  The author's concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system. 
+  
 * PCR reagents  
   * Polymerase - high fidelity  
   * Reagent contaminats  
 * PCR cycling conditions  
   * number of cycles
+    * Using a mock community of 68 organisms @Amore2016 showed that increasing the number of PCR cycles resulted in increased sequencing error rates (0.58% vs. 0.64% p = 0.11) and chimeras (15 cycles 0.00% and 25 cycles 0.66%, p = 0.0245).  
+  * @Albertsen evaluated the amount of template and cycle number but only observed "small changes". Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.  
+  * @Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\Beta$ diversity.   
   * sequence copy abundance  
   * chimeras  
 
 ### Library Preparation  
 @Kennedy2014 found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. 
 Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.  
+
+@Schirmer2015 sequenced a mock community of 59 different strains to evaluate the sequencing error rate for different sample processing methods. Though only fully characterizing a subset of a the results.  
 
 * Barcode/ indexing (optional)  
   * Do not know of any barcode specific biases
@@ -94,6 +109,8 @@ Barcoded 16S PCR primers were used in the study therefore the impact of barcodes
 
 ### Sequencing  
 * Sequencing platform  
+  * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM.  
+    * Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
 * Read length  
 * Sequencing chemistry  
 
@@ -128,11 +145,13 @@ OTU assignment most commonly by clustering is used to reduce the number of spuri
       * Sequences can be clustered with a set of reference cluster centers or without (_de novo_).  
 
 ### Taxonomic Assignment
-Assign clusters a taxonomic name  
+Assign clusters a taxonomic name
+* @Claesson2010 _in silico_ analysis of the taxonomic resolution for different variable regions and read lengths (454 and MISeq 150, 100, 75, and 50 bp paired end reads) and primers.
 
 ## Downstream analysis  
 ### Differential Abundance  
-* Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control.  
+* Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control. 
+*@Jonsson2016 Simulation based approach to evaluating differential abundance methods.  __NEED TO REVIEW__
 
 ### Alpha Diversity  
 * Measure of biological or ecological diversity within a sample.  
@@ -155,3 +174,5 @@ Assign clusters a taxonomic name
 
 ### Beta Diversity  
 
+## Step-by-Step protocols  
+* @Albertsen Activated Sludge http://www.midasfieldguide.org/

@@ -9,11 +9,11 @@ link-citations: true
 ---
 
 ```{r setup, include=FALSE}
-# options(htmltools.dir.version = FALSE, formatR.indent = 2)
-# lapply(c('DT'), function(pkg) {
-#   if (!requireNamespace(pkg)) install.packages(pkg)
-# })
-# if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
+options(htmltools.dir.version = FALSE, formatR.indent = 2)
+lapply(c('DT'), function(pkg) {
+  if (!requireNamespace(pkg)) install.packages(pkg)
+})
+if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
 ```
 # Metrology of Metagenomics  
 ## Microbiome  
@@ -38,9 +38,13 @@ link-citations: true
         * top-down vs. bottom-up  
         * analytical chemsitry text  
     + Orthogonal methods  
-        * Genome in a bottle example 
+        * Genome in a bottle example  
+        * Examples of orthogonal methods for 16S metagenomics:  
+          * @Albertsen2015 16S, metagenomics, metatranscriptomics, and FISH  
 
 ## Key references
+### Measurement Process
+* @Goodrich2014
 ### Sample Processing and Sequencing  
 * @Brooks2015  
 * @Amore2016  
