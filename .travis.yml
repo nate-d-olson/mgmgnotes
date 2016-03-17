@@ -1,9 +1,8 @@
 language: r
-sudo: false
 
 r_github_packages:
   - rstudio/bookdown
 
 script:
-  - _build.sh
-  - _deploy.sh
+  - ./_build.sh
+  - ./_deploy.sh
