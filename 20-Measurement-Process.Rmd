@@ -66,6 +66,9 @@ The part consists of five main steps:
     * Potentially sample specific biases but do not know of any within sample biases  
 
 ### 16S rRNA PCR
+* Template concentration  
+  * This is related to low concentration samples or samples with poor DNA extraction efficiencies.
+  * @Kennedy2014 showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility. 
 * Target variable region  
 * PCR primers (optional barcoded primers) 
 * PCR reagents  
@@ -77,6 +80,9 @@ The part consists of five main steps:
   * chimeras  
 
 ### Library Preparation  
+@Kennedy2014 found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. 
+Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.  
+
 * Barcode/ indexing (optional)  
   * Do not know of any barcode specific biases
 * Normalization and Pooling  
