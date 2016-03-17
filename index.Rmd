@@ -9,11 +9,11 @@ link-citations: true
 ---
 
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE, formatR.indent = 2)
-lapply(c('DT'), function(pkg) {
-  if (!requireNamespace(pkg)) install.packages(pkg)
-})
-if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
+# options(htmltools.dir.version = FALSE, formatR.indent = 2)
+# lapply(c('DT'), function(pkg) {
+#   if (!requireNamespace(pkg)) install.packages(pkg)
+# })
+# if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
 ```
 # Metrology of Metagenomics  
 ## Microbiome  
@@ -21,6 +21,8 @@ if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
 - whole metagenomic sequencing  
 - marker-gene metagenomics  
 - 16S vs. WMS   
+  * @Clooney2016 compared WMS and 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM.  
+    * WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
 
 ## Metrology  
 - No not meteorlogy  
@@ -37,6 +39,12 @@ if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
         * analytical chemsitry text  
     + Orthogonal methods  
         * Genome in a bottle example 
+
+## Key references
+### Sample Processing and Sequencing  
+* @Brooks2015  
+* @Amore2016  
+
 
 <!--
 
