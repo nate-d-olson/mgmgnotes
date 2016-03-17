@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Measurement Science of Metagenomics</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Measurement Science of Metagenomics">
+  <meta name="generator" content="bookdown 0.0.52 and GitBook 2.6.7">
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="process-characterization.html">
+<link rel="next" href="benchmarking-dataset.html">
+
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Metrology of Marker-Gene Metagenomics </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Metrology of Metagenomics</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#microbiome"><i class="fa fa-check"></i><b>1.1</b> Microbiome</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#measuring-microbiomes"><i class="fa fa-check"></i><b>1.2</b> Measuring Microbiomes</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#metrology"><i class="fa fa-check"></i><b>1.3</b> Metrology</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#key-references"><i class="fa fa-check"></i><b>1.4</b> Key references</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#sample-processing-and-sequencing"><i class="fa fa-check"></i><b>1.4.1</b> Sample Processing and Sequencing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="s-rrna-gene.html"><a href="s-rrna-gene.html"><i class="fa fa-check"></i><b>2</b> 16S rRNA Gene</a><ul>
+<li class="chapter" data-level="2.1" data-path="s-rrna-gene.html"><a href="s-rrna-gene.html#general-background-about-16s-rrna-gene"><i class="fa fa-check"></i><b>2.1</b> General background about 16S rRNA Gene</a></li>
+<li class="chapter" data-level="2.2" data-path="s-rrna-gene.html"><a href="s-rrna-gene.html#s-rrna-phylogenetics"><i class="fa fa-check"></i><b>2.2</b> 16S rRNA phylogenetics</a></li>
+<li class="chapter" data-level="2.3" data-path="s-rrna-gene.html"><a href="s-rrna-gene.html#s-rrna-databases"><i class="fa fa-check"></i><b>2.3</b> 16S rRNA Databases</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="process-characterization.html"><a href="process-characterization.html"><i class="fa fa-check"></i><b>3</b> Process Characterization</a></li>
+<li class="chapter" data-level="4" data-path="measurement-process.html"><a href="measurement-process.html"><i class="fa fa-check"></i><b>4</b> Measurement Process</a><ul>
+<li class="chapter" data-level="4.1" data-path="measurement-process.html"><a href="measurement-process.html#sample-to-seq"><i class="fa fa-check"></i><b>4.1</b> Sample to Seq</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="measurement-process.html"><a href="measurement-process.html#sample-collection"><i class="fa fa-check"></i><b>4.1.1</b> Sample Collection</a></li>
+<li class="chapter" data-level="4.1.2" data-path="measurement-process.html"><a href="measurement-process.html#sample-processing"><i class="fa fa-check"></i><b>4.1.2</b> Sample Processing</a></li>
+<li class="chapter" data-level="4.1.3" data-path="measurement-process.html"><a href="measurement-process.html#s-rrna-pcr"><i class="fa fa-check"></i><b>4.1.3</b> 16S rRNA PCR</a></li>
+<li class="chapter" data-level="4.1.4" data-path="measurement-process.html"><a href="measurement-process.html#library-preparation"><i class="fa fa-check"></i><b>4.1.4</b> Library Preparation</a></li>
+<li class="chapter" data-level="4.1.5" data-path="measurement-process.html"><a href="measurement-process.html#sequencing"><i class="fa fa-check"></i><b>4.1.5</b> Sequencing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="measurement-process.html"><a href="measurement-process.html#seq-to-otu"><i class="fa fa-check"></i><b>4.2</b> Seq to OTU</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="measurement-process.html"><a href="measurement-process.html#quality-filter-read-trimming"><i class="fa fa-check"></i><b>4.2.1</b> quality filter/ read trimming</a></li>
+<li class="chapter" data-level="4.2.2" data-path="measurement-process.html"><a href="measurement-process.html#otu-assignment"><i class="fa fa-check"></i><b>4.2.2</b> OTU Assignment</a></li>
+<li class="chapter" data-level="4.2.3" data-path="measurement-process.html"><a href="measurement-process.html#taxonomic-assignment"><i class="fa fa-check"></i><b>4.2.3</b> Taxonomic Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="measurement-process.html"><a href="measurement-process.html#downstream-analysis"><i class="fa fa-check"></i><b>4.3</b> Downstream analysis</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="measurement-process.html"><a href="measurement-process.html#differential-abundance"><i class="fa fa-check"></i><b>4.3.1</b> Differential Abundance</a></li>
+<li class="chapter" data-level="4.3.2" data-path="measurement-process.html"><a href="measurement-process.html#alpha-diversity"><i class="fa fa-check"></i><b>4.3.2</b> Alpha Diversity</a></li>
+<li class="chapter" data-level="4.3.3" data-path="measurement-process.html"><a href="measurement-process.html#beta-diversity"><i class="fa fa-check"></i><b>4.3.3</b> Beta Diversity</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="measurement-process.html"><a href="measurement-process.html#s-rrna-analysis-method-assessment"><i class="fa fa-check"></i><b>4.4</b> 16S rRNA Analysis Method Assessment</a></li>
+<li class="chapter" data-level="4.5" data-path="measurement-process.html"><a href="measurement-process.html#sample-to-fastq"><i class="fa fa-check"></i><b>4.5</b> Sample to fastq</a></li>
+<li class="chapter" data-level="4.6" data-path="measurement-process.html"><a href="measurement-process.html#seq-to-otu-1"><i class="fa fa-check"></i><b>4.6</b> Seq to OTU</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="measurement-process.html"><a href="measurement-process.html#pre-processing"><i class="fa fa-check"></i><b>4.6.1</b> Pre-processing</a></li>
+<li class="chapter" data-level="4.6.2" data-path="measurement-process.html"><a href="measurement-process.html#chimera-detection"><i class="fa fa-check"></i><b>4.6.2</b> Chimera Detection</a></li>
+<li class="chapter" data-level="4.6.3" data-path="measurement-process.html"><a href="measurement-process.html#otu-assignment-1"><i class="fa fa-check"></i><b>4.6.3</b> OTU Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="measurement-process.html"><a href="measurement-process.html#downstream-analysis-1"><i class="fa fa-check"></i><b>4.7</b> Downstream analysis</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="measurement-process.html"><a href="measurement-process.html#taxonomic-classification"><i class="fa fa-check"></i><b>4.7.1</b> taxonomic classification</a></li>
+<li class="chapter" data-level="4.7.2" data-path="measurement-process.html"><a href="measurement-process.html#differential-abundance-1"><i class="fa fa-check"></i><b>4.7.2</b> differential abundance</a></li>
+<li class="chapter" data-level="4.7.3" data-path="measurement-process.html"><a href="measurement-process.html#ecological-diversity"><i class="fa fa-check"></i><b>4.7.3</b> ecological diversity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="benchmarking-dataset.html"><a href="benchmarking-dataset.html"><i class="fa fa-check"></i><b>5</b> Benchmarking Dataset</a></li>
+<li class="chapter" data-level="6" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html"><i class="fa fa-check"></i><b>6</b> Ecological Diversity Robustness</a><ul>
+<li class="chapter" data-level="6.1" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html#overview"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="gold-standard-pipeline.html"><a href="gold-standard-pipeline.html"><i class="fa fa-check"></i><b>7</b> Gold Standard Pipeline</a></li>
+<li class="chapter" data-level="8" data-path="assessment-framework.html"><a href="assessment-framework.html"><i class="fa fa-check"></i><b>8</b> Assessment Framework</a></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://www.somewebsite.com" target="blank">Published with N8O</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Measurement Science of Metagenomics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="measurement-process" class="section level1">
+<h1><span class="header-section-number">4</span> Measurement Process</h1>
+<p>Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues.</p>
+<p>Diagram of measurement process <a href="measurement-process.html#fig:fishbone">4.1</a> .</p>
+<pre><code>## Package &#39;qcc&#39;, version 2.6</code></pre>
+<pre><code>## Type &#39;citation(&quot;qcc&quot;)&#39; for citing this R package in publications.</code></pre>
+<div class="figure"><span id="fig:fishbone"></span>
+<img src="_main_files/figure-html/fishbone-1.png" alt="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process."  />
+<p class="caption">
+Figure 4.1: Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process.
+</p>
+</div>
+<p>Review of what is currently known about the sources of error and bias in the 16S metagenomics measurement process. Cause-effect diagrams are commonly used in process quality control to show the relationship between steps in the measurement process and sources of error or bias <a href="measurement-process.html#fig:cause-effect">4.2</a>.<br />
+Potentially may want to revise to focus on sources of error, e.g. cell type bias, preferential amplification, sequence errors, chimeras .</p>
+<div class="figure"><span id="fig:cause-effect"></span>
+<img src="_main_files/figure-html/cause-effect-1.png" alt="Causes (branch labels) of bias and variability indicated for different sources of error (branch text)."  />
+<p class="caption">
+Figure 4.2: Causes (branch labels) of bias and variability indicated for different sources of error (branch text).
+</p>
+</div>
+<div id="sample-to-seq" class="section level2">
+<h2><span class="header-section-number">4.1</span> Sample to Seq</h2>
+<p>The first part of the measurement process is generating sequencing data from an environmental sample.</p>
+<p>The part consists of five main steps:</p>
+<ol style="list-style-type: decimal">
+<li>Sample Collection<br />
+</li>
+<li>Sample Processing<br />
+</li>
+<li>16S rRNA PCR<br />
+</li>
+<li>Library Prep<br />
+</li>
+<li>Sequencing</li>
+</ol>
+<div id="sample-collection" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Sample Collection</h3>
+<ul>
+<li>Collection of sample that is representative of population being studied.<br />
+</li>
+<li>Kitty Biome study as an example of sample heterogeneity.<br />
+</li>
+<li>Impact of sample storage.<br />
+</li>
+<li>Fecal storage study.<br />
+</li>
+<li>Old coral study?</li>
+</ul>
+</div>
+<div id="sample-processing" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Sample Processing</h3>
+<ul>
+<li>DNA extraction<br />
+</li>
+<li>Cell type specific extraction biases<br />
+</li>
+<li>DNA concentration requirements for library prep<br />
+</li>
+<li>Issues with low concentration samples - skin microbiome<br />
+</li>
+<li>Additional DNA purification to remove PCR inhibitors.<br />
+</li>
+<li>Old PCR inhibitor paper.<br />
+</li>
+<li>Any studies showing inhibitors inducing biases in metagenomic studies?
+<ul>
+<li>Potentially sample specific biases but do not know of any within sample biases</li>
+</ul></li>
+</ul>
+</div>
+<div id="s-rrna-pcr" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> 16S rRNA PCR</h3>
+<ul>
+<li>Template concentration<br />
+</li>
+<li>This is related to low concentration samples or samples with poor DNA extraction efficiencies.</li>
+<li><span class="citation">Kennedy et al. (<a href="references.html#ref-Kennedy2014">2014</a>)</span> showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility.</li>
+<li>Target variable region<br />
+</li>
+<li>PCR primers (optional barcoded primers)</li>
+<li>PCR reagents<br />
+</li>
+<li>Polymerase - high fidelity<br />
+</li>
+<li>Reagent contaminats<br />
+</li>
+<li>PCR cycling conditions<br />
+</li>
+<li>number of cycles</li>
+<li>sequence copy abundance<br />
+</li>
+<li>chimeras</li>
+</ul>
+</div>
+<div id="library-preparation" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Library Preparation</h3>
+<p><span class="citation">Kennedy et al. (<a href="references.html#ref-Kennedy2014">2014</a>)</span> found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.</p>
+<ul>
+<li>Barcode/ indexing (optional)<br />
+</li>
+<li>Do not know of any barcode specific biases</li>
+<li>Normalization and Pooling<br />
+</li>
+<li>Methods
+<ul>
+<li>DNA quantification<br />
+</li>
+<li>Bead based assays</li>
+</ul></li>
+<li>Associated Biases
+<ul>
+<li>Uneven sequencing depth - impact of coverage</li>
+</ul></li>
+</ul>
+</div>
+<div id="sequencing" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Sequencing</h3>
+<ul>
+<li>Sequencing platform<br />
+</li>
+<li>Read length<br />
+</li>
+<li>Sequencing chemistry</li>
+</ul>
+</div>
+</div>
+<div id="seq-to-otu" class="section level2">
+<h2><span class="header-section-number">4.2</span> Seq to OTU</h2>
+<p>Convering raw sequence data to a OTU table with taxonomic annotations for use in downstream applications.</p>
+<div id="quality-filter-read-trimming" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> quality filter/ read trimming</h3>
+<ul>
+<li>Filtering low quality reads - short reads with high error rates.<br />
+</li>
+<li>Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.</li>
+<li>Merging paired ends</li>
+<li>Merging forward and reverse reads into single contigs</li>
+<li>chimera detection</li>
+<li>detection and removal of chimeric reads, artifact of the PCR amplification process.</li>
+</ul>
+</div>
+<div id="otu-assignment" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> OTU Assignment</h3>
+<p>OTU assignment most commonly by clustering is used to reduce the number of spurious observations, sequences are grouped into OTUs.</p>
+<ul>
+<li>Different approaches to clustering
+<ul>
+<li>distance based clustering - most commonly used<br />
+</li>
+<li>Distance based clustering is a NP hard problem (i.e. computationaly intense), therefore a number of heuristics are used to make the method computationally tractable for large datasets.</li>
+<li>Threshold are used to define the similarity of sequences within a cluster, 99% and 97% are commonly used.
+<ul>
+<li>Some biological and sequencing error basis for threshold values, (e.g. 99% species level, 97% genus level, 1% error rate). Taxonomic variability in 16S rRNA sequence diversity (Pai?) and sequencing error <span class="citation">(Huse et al. <a href="references.html#ref-Huse2010">2010</a>, <span class="citation">Schirmer et al. (<a href="references.html#ref-Schirmer2015">2015</a>)</span>, <span class="citation">Amore et al. (<a href="references.html#ref-Amore2016">2016</a>)</span>)</span> challenges the validity of these values.</li>
+</ul></li>
+<li>Different distance based thresholds.
+<ul>
+<li>average linkage<br />
+</li>
+<li>single linkage<br />
+</li>
+<li>complete linkage<br />
+</li>
+</ul></li>
+<li>Other clustering/ OTU assignment methods include:</li>
+<li>distribution based<br />
+</li>
+<li>oligotyping<br />
+</li>
+<li>tree based clustering <span class="citation">(Wu, Doroud, and Eisen <a href="references.html#ref-Wu2013">2013</a>)</span></li>
+<li>De novo vs Reference based clustering</li>
+<li>Sequences can be clustered with a set of reference cluster centers or without (<em>de novo</em>).</li>
+</ul></li>
+</ul>
+</div>
+<div id="taxonomic-assignment" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Taxonomic Assignment</h3>
+<p>Assign clusters a taxonomic name</p>
+</div>
+</div>
+<div id="downstream-analysis" class="section level2">
+<h2><span class="header-section-number">4.3</span> Downstream analysis</h2>
+<div id="differential-abundance" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Differential Abundance</h3>
+<ul>
+<li>Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control.</li>
+</ul>
+</div>
+<div id="alpha-diversity" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Alpha Diversity</h3>
+<ul>
+<li>Measure of biological or ecological diversity within a sample.<br />
+</li>
+<li>Alpha diversity as a continuum related to the metric dependence on richness and evenness <span class="citation">(Chao et al. <a href="references.html#ref-Chao2014">2014</a>)</span></li>
+<li>Four primary categories richness, evenness, abundance weighted, and dissimilarity <span class="citation">(Ricotta <a href="references.html#ref-Ricotta2007">2007</a>)</span></li>
+<li>Richness
+<ul>
+<li>Hill numbers, rarefaction, and richness estimation <span class="citation">(Chao et al. <a href="references.html#ref-Chao2014">2014</a>)</span></li>
+</ul></li>
+<li>Evenness
+<ul>
+<li>Criteria for evaluating evenness metrics <span class="citation">(Tuomisto <a href="references.html#ref-Tuomisto2012">2012</a>)</span></li>
+<li>See <span class="citation">Tuomisto (<a href="references.html#ref-Tuomisto2012">2012</a>)</span> Table 1 for summary of evenness metric including interpretation</li>
+</ul></li>
+<li>Abundance weighted</li>
+<li>Dissimilarity</li>
+<li>Parametric vs. Non-parametric diversity metrics for 16S rRNA sequence analysis <span class="citation">(Bunge, Willis, and Walsh <a href="references.html#ref-Bunge2014">2014</a>)</span></li>
+<li>Development of alpha diversity richness metric for microbial diversity.<br />
+</li>
+<li>Chao1 a traditional diversity metric estimates total diversity using the number of singletons, OTUs representing only a single sequence.
+<ul>
+<li>Issue with singleton based diversity metrics for microbial diversity is that for incresed sequencing depth the number of singletons with continue to increase due to sequencing errors, leading to artifically inflated diversity estimates.</li>
+</ul></li>
+<li><span class="citation">Chiu and Chao (<a href="references.html#ref-Chiu2015">2015</a>)</span> developed a modified version of the Chao1 estimator that is more robust to singletons bue to sequencing errors.</li>
+<li>This method estimates diversity based on the number of doubletons to tentons.<br />
+</li>
+<li>Incorporates Hill numbers as well.</li>
+</ul>
+</div>
+<div id="beta-diversity" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Beta Diversity</h3>
+
+</div>
+</div>
+<div id="s-rrna-analysis-method-assessment" class="section level2">
+<h2><span class="header-section-number">4.4</span> 16S rRNA Analysis Method Assessment</h2>
+<p>Method steps<br />
+1. Sample to Seq 1. Seq to OTU<br />
+2. Downstream analysis 3. Taxonomic Classification<br />
+ 4. Differential Abundance<br />
+ 5. Ecological Diversity</p>
+</div>
+<div id="sample-to-fastq" class="section level2">
+<h2><span class="header-section-number">4.5</span> Sample to fastq</h2>
+<ul>
+<li>Benchmarking
+<ul>
+<li>using <em>in vitro</em> mock communities (e.g. cells, DNA, or PCR products)<br />
+</li>
+<li>technical replicates?<br />
+</li>
+<li>well characterized benchmarking samples - similar to Genomic RMs (deep sequenced multiple methods)<br />
+</li>
+<li>Mixture/ titrations<br />
+</li>
+<li>Standard additions<br />
+</li>
+<li>Dilution to extinction?</li>
+</ul></li>
+</ul>
+</div>
+<div id="seq-to-otu-1" class="section level2">
+<h2><span class="header-section-number">4.6</span> Seq to OTU</h2>
+<div id="pre-processing" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Pre-processing</h3>
+<p>Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. <a href="http://doi.org/10.1371/journal.pcbi.1000844" class="uri">http://doi.org/10.1371/journal.pcbi.1000844</a></p>
+<p>Albanese, D., Fontana, P., De Filippo, C., Cavalieri, D., &amp; Donati, C. (2015). MICCA: a complete and accurate software for taxonomic profiling of metagenomic data. Scientific Reports, 5, 9743. <a href="http://doi.org/10.1038/srep09743" class="uri">http://doi.org/10.1038/srep09743</a><br />
+* Evaluates preprocessing % read passing filtering, chimeras, and redundant OTUs, relative abundance</p>
+<p>Gaspar, J. M., &amp; Thomas, W. K. (2013). Assessing the consequences of denoising marker-based metagenomic data. PloS One, 8(3), e60458. <a href="http://doi.org/10.1371/journal.pone.0060458" class="uri">http://doi.org/10.1371/journal.pone.0060458</a><br />
+* Evaluation of denoising and chimera detection methods for 454 data</p>
+</div>
+<div id="chimera-detection" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> Chimera Detection</h3>
+<p>Mysara, M., Saeys, Y., Leys, N., Raes, J., &amp; Monsieurs, P. (2015). CATCh, an Ensemble Classifier for Chimera Detection in 16S rRNA Sequencing Studies. Applied and Environmental Microbiology, 81(December), 1573–1584. <a href="http://doi.org/10.1128/AEM.02896-14" class="uri">http://doi.org/10.1128/AEM.02896-14</a></p>
+<p>Beblur - <a href="https://github.com/ekopylova/deblur" class="uri">https://github.com/ekopylova/deblur</a></p>
+</div>
+<div id="otu-assignment-1" class="section level3">
+<h3><span class="header-section-number">4.6.3</span> OTU Assignment</h3>
+<ul>
+<li>De novo clustering has been shown to be more accurate <span class="citation">(S. L. Westcott and Schloss <a href="references.html#ref-Westcott2015">2015</a>)</span><br />
+</li>
+<li>Types of datasets used to assess benchmarking methods: simulated data, mock communities, environmental datasests</li>
+<li>Approaches to evaluating clustering methods
+<ul>
+<li>Cluster stability - similarity in clustering results when varying input data<br />
+</li>
+<li>Cluster reproducibility - similarity in clustering results between methods<br />
+</li>
+<li>Number of artifact OTUs - number of observed OTUs relative to expected
+<ul>
+<li>Evaluating clustering methods using simulated and mock community clustering data provide a level of truth (expectation of the correct result).</li>
+</ul></li>
+</ul></li>
+</ul>
+<div id="summary-of-cluster-method-assessment-papers" class="section level4">
+<h4><span class="header-section-number">4.6.3.1</span> Summary of Cluster Method Assessment Papers</h4>
+<ul>
+<li><span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span> used a combination of simulated, mock communities, and data from environmental samples to compare clustering methods.
+<ul>
+<li>They evaluated the performance of the clustering methods using F-measure and phylogenetic distance.<br />
+</li>
+<li>For environment datasets the clustering methods were evaluated based on the disimilarity of samples for a dataset based on the sum of the squared deviation for UniFrac PCoA (Procrustes M^2) and similarity to UCLUST (Pearson’s correlation). <strong>NOTE</strong> Still note sure what they are evaluating for Procrustes.<br />
+</li>
+<li>The authors excluded singletons from there analysis, while this does help to eliminate spurious OTUs, the method may also exclude rare taxa.<br />
+</li>
+</ul></li>
+<li><span class="citation">Schloss (<a href="references.html#ref-Schloss2016">2016</a>)</span> argues that using simulated and mock communities is not representative of real environmental samples. The authors additionally, argue the approach used by <span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span> to evaluating clustering methods confounds the impact of read filtering with clustering methods.
+<ul>
+<li>The author’s evaluated environmental datasets using Mathew’s correlation coefficient, for a truth table (TP, TN, FP, FN) based on distance between sequences in the same and different clusters.
+<ul>
+<li>This method for evaluating clusters was first used in <span class="citation">(P. D. Schloss and Westcott <a href="references.html#ref-Schloss2011">2011</a>)</span><br />
+</li>
+</ul></li>
+<li>Average neighbor performed the best based the MCC based assessment. However, this approach to evaluation is biased towards this method as the results are strictly assessed based on the sequence distance criteria. Other clustering methods that attempt to address more nuianced issues with clustering, sequencing error and variability in sequence diversity allow for differences in distances within and between clusters.<br />
+</li>
+<li>This approach to cluster evaluation is particularly suited for algorithms based on analytical proofs.</li>
+<li>For example the DNACluster clustering algorithm employs a heuristic based on a proof that for any given cluster the distance between two sequences in the cluster is less than the defined threshold value and no sequence is closer to another cluster center than the center of the cluster it is assigned to <span class="citation">(Ghodsi, Liu, and Pop <a href="references.html#ref-Ghodsi2011">2011</a>)</span>.
+<ul>
+<li><span class="citation">Ghodsi, Liu, and Pop (<a href="references.html#ref-Ghodsi2011">2011</a>)</span> used a similar approach to validate their clustering method, though only focusing on the within cluster pairwise distance.</li>
+</ul></li>
+</ul></li>
+<li>Cluster Robustness is another attribute for evaluating clustering methods <span class="citation">(He et al. <a href="references.html#ref-He2015">2015</a>)</span>.
+<ul>
+<li>Cluster robustness is the reproduciblity of the OTU table generated by a clustering algorith.<br />
+</li>
+<li>Cluster robustness was evaluated based on:
+<ul>
+<li>Unstable sequences - sequences represented by different centroids</li>
+<li>Unstable OTUs - OTUs where membership was impacted by the number of sequences in a dataset.</li>
+<li>using Mathew’s correlation coefficient
+<ul>
+<li>Truth Table definitions
+<ul>
+<li>TP if two sequences clustered <strong>together</strong> for the full and subsampled dataset<br />
+</li>
+<li>TN if two sequences clustered <strong>separately</strong> for the full and subsampled<br />
+</li>
+<li>FN two sequences clustered <strong>together</strong> in full but not subsampled.<br />
+</li>
+<li>FP two sequences clustered <strong>separately</strong> in full but together in subsampled dataset.</li>
+</ul></li>
+<li>The MCC method uses the full dataset at the true value to benchmark the subsampled dataset against.<br />
+</li>
+<li><strong>NOTE</strong> Is this a valid assumption for clustering?<br />
+</li>
+</ul></li>
+<li>Impact of cluster stablity on Rarefaction curves, PCoA with Bray-Curtis and UniFrac.<br />
+</li>
+<li>Tested for significance using ADNOIS, a non-parametric test measuring effect size, the amount of the observed variance explained by metadata variables. <strong>NEED REF</strong> - See vegan manual for potenial references.</li>
+</ul></li>
+<li>The resulting OTU table is dependent the number of sequences clustered.<br />
+</li>
+<li>For some methods the OTU table is dependent on the order in which the sequences are provided <span class="citation">(Ghodsi, Liu, and Pop <a href="references.html#ref-Ghodsi2011">2011</a>)</span>.<br />
+</li>
+<li>Closed reference clustering was the only method the produced stable clusters.<br />
+</li>
+<li>This method discards sequences that do not cluster with reference sequences.<br />
+</li>
+<li>Open-reference cluster, which performs <em>de novo</em> clustering of unmatched sequences provides a more robust alternative clustering method to <em>de novo</em> clustering while allowing for the diversity of novel OTUs.<br />
+</li>
+</ul></li>
+<li>Cluster method robustness can also be calculated using cross validation<span class="citation">(Chen et al. <a href="references.html#ref-Chen2013">2013</a>)</span>.
+<ul>
+<li><span class="citation">Chen et al. (<a href="references.html#ref-Chen2013">2013</a>)</span> subsampled the data to 90% five times and compared the clusters between replicates.<br />
+</li>
+<li>Methods were evaluated using precision, recall, and NID
+<ul>
+<li>precision - measure of cluster homogeneity<br />
+</li>
+<li>recall - measure of cluster completeness<br />
+</li>
+<li>NID - assess cluster globally???<br />
+</li>
+</ul></li>
+<li>See assessment of cluster quality for metric definitions<br />
+</li>
+</ul></li>
+<li>Cluster robustness can also be evaluated based on threshold and 16S region <span class="citation">(Schmidt, Matias Rodrigues, and Mering <a href="references.html#ref-Schmidt2015">2015</a>)</span>.
+<ul>
+<li>The authors focus their assessment more on the comparability of results among different methods and note the importances of reproducibility.<br />
+</li>
+<li>Quote from paper “how robust are biological findings to the choice of clustering method? We found that OTU demarcation may indeed be replicable: different methods provided (almost) identical partitions when twice clustering the exact same sets of sequences, but in randomized order (Fig. 4, diagonals). However, trends in reproducibility were less clear.”<br />
+</li>
+</ul></li>
+<li>Cluster method assessment based on OTU inflation.
+<ul>
+<li>Clustering methods have also been evaluated based on the number of predicted OTUs relative to the number of expected OTUs <span class="citation">(Huse et al. <a href="references.html#ref-Huse2010">2010</a>, <span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span>)</span>.<br />
+</li>
+<li>Here either simulated or data from a mock community, where the number of OTUs is based on the number of strains or genomes used to generate the assessment dataset.<br />
+</li>
+<li>The limitation to this approach is that it does not account for contaminants when <strong>in vitro</strong> mock communities are used, and neither <strong>in silico</strong> or <strong>in vitro</strong> datasets represent the true complexity and diversity of environmental samples.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="downstream-analysis-1" class="section level2">
+<h2><span class="header-section-number">4.7</span> Downstream analysis</h2>
+<div id="taxonomic-classification" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> taxonomic classification</h3>
+</div>
+<div id="differential-abundance-1" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> differential abundance</h3>
+</div>
+<div id="ecological-diversity" class="section level3">
+<h3><span class="header-section-number">4.7.3</span> ecological diversity</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="process-characterization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="benchmarking-dataset.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/inst/examples/20-Measurement-Process.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": false
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+
+</body>
+
+</html>
