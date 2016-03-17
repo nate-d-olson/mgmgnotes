@@ -1,12 +1,13 @@
 language: r
-
 r_github_packages:
-  - rstudio/bookdown
-
+- rstudio/bookdown
 before_script:
- - chmod +x ./_build.sh
- - chmod +x ./_deploy.sh
-
+- chmod +x ./_build.sh
+- chmod +x ./_deploy.sh
 script:
-  - ./_build.sh
-  - ./_deploy.sh
+- "./_build.sh"
+- "./_deploy.sh"
+
+env:
+  global:
+    secure: up8GYE2jzdq3Gaewy28XLhYVcZTZPIp2w5ykTKjF7EVdOIHVHWwxMW+UVel2gBVCtNfbh59WsWqKYSixPWRx71nkG8Ae4BDyYmXHurHMml1uZZ5d8IyJI8TbMVSfU757uFLalbRtQN2bx4Ww/4CvI/TTQ6CMoLWwCdwIQ2VG5GXY/wwI2PkDIR3S/nR08X6OSawYTluuxc1uHlPTZNNLQLFgb+MnLI+Fdx9Y5W5JdBY8Dx+hmPlNt6kGoYbS2OKlluJZYqSGN/hyae8qngKniK7BDx0bhOBQ+kfAKBWV3EwkvE9iofBjLq556nBSKUNc9Dx+bAraS0txU86udSacLoTGyB+f7gj4lmThjLZeGKIv5cQMpog7BnUsPGXgUeku5pjR3rg2BiqKvejyCQJe8zNZ8dnrl2cywXtmHC4uIvkZFBhegjGlpnzL6oQ7esWqzCzn19MPAKnZACdfKCbua/ek0zDC8n0bhn4XO2VDXS4htgBF0p375AlVPlIV0+Y2n+OAtMxgE2En4QCvFi0dsJfOw00yUtahjpBpV5Yt/U2rlh4UCVlBFg0ytW7/nk9qIhTJ+tHSEpADmy4I9q0qYK8ZdjL4MBogAJTV9AfJlIJoyH6n3WyvlueOIjeYFo4GgybbuaCqKYLs8hgSYqWLYBg6NrUO8hqdGjK6gBskxxc=
