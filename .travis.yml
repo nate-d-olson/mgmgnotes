@@ -1,7 +1,5 @@
 language: r
 
-sudo: false
-
 r_packages:
   - qcc
 
@@ -11,8 +9,3 @@ r_github_packages:
 script:
   - ./build.sh
   - ./deploy.sh
-
-cache:
-  packages: yes
-  directories:
-    - $TRAVIS_BUILD_DIR/_book/_bookdown_files
