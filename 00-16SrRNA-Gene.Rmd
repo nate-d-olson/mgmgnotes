@@ -1,0 +1,21 @@
+# 16S rRNA Gene 
+Not sure where this fits in...
+
+## General background about 16S rRNA Gene  
+* Biological function  
+* Variable and conserved regions  
+* Multicopy  
+* Horizontal gene transfer  
+* Gene diversity  
+    - secondary structure  
+    - Use of different variable regions  
+
+## 16S rRNA phylogenetics
+* Gene evolution  
+* Phylogeny  
+
+## 16S rRNA Databases
+* RDP  
+* Greengenes  
+* NCBI  
+* SILVA    

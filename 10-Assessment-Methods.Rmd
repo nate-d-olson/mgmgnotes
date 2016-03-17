@@ -1,0 +1,37 @@
+# Process Characterization
+* Tools  
+    - Validation  
+        + Fit for purpose - comparison to gold standard method or reference material  
+            * no gold standard methods - only community accepted defactor standards  
+    - Benchmarking  
+        + Comparison to known truth  
+        + Evaluating results based on expectation  
+    - Robustness testing  
+        + Impact of procedure or step on results  
+* Characterization of Data Analysis Processing  
+    - Wet lab vs. dry lab  
+    - Validation  
+        + Currently not applicable ... -> most robust method  
+    - Benchmarking  
+        + Observed results vs. Truth  
+            * Dataset with known true value - can be obtained using  
+                - gold standard method  
+                - mock communities: in vitro or in silico   
+                    + limitations and assumptions  
+                - Mixtures
+                    + Provides a degree of known truth  
+            * Performance metrics  
+                - Quantitative  
+                    + Variability - standard deviation/ variance  
+                    + Bias - mean squared error??? (true value)  
+        + Observed results vs. assumptions  
+            * No general dataset requirements  
+            * Performance metrics  
+                - evaluate results based on method assumption, e.g. Schloss clustering distance  
+    - Robustness Testing  
+        + Used to evaluate impact of different methods on results  
+        + Comparison of orthogonal methods  
+            * For fundamentally different methods (different assumptions and heuristics)  
+                - Can evaluate precision (variability), not necessarily accuracy but less susceptible to bias than is methods are based on the same assumptions or heuristics  
+        + Used to evaluate how different steps in the process affect the results  
+

@@ -8,3 +8,314 @@
   note = {ISBN 978-1498716963},
   url = {http://yihui.name/knitr/},
 }
+
+@article{Schmidt2015,
+abstract = {The demarcation of operational taxonomic units (OTUs) from complex sequence data sets is a key step in contemporary studies of microbial ecology. However, as biologically motivated ‘optimal' OTU- binning algorithms remain elusive, many conceptu- ally distinct approaches continue to be used. Using a global data set of 887 870 bacterial 16S rRNA gene sequences, we objectively quantified biases intro- duced by several widely employed sequence cluster- ing algorithms. We found that OTU-binning methods often provided surprisingly non-equivalent partitions of identical data sets, notably when clustering to the same nominal similarity thresholds; and we quanti- fied the resulting impact on ecological data descrip- tion for a well-defined human skin microbiome data set. We observed that some methods were very robust to varying clustering thresholds, while others were found to be highly susceptible even to slight threshold variations. Moreover, we comprehensively quantified the impact of the choice of 16S rRNA gene subregion, as well as of data set scope and context on algorithm performance. Our findings may contribute to an enhanced comparability of results across sequence-processing pipelines, and we arrive at rec- ommendations towards higher levels of standardiza- tion in established workflows. Introduction},
+author = {Schmidt, Thomas S B and {Matias Rodrigues}, Jo??o F. and von Mering, Christian},
+doi = {10.1111/1462-2920.12610},
+file = {:Users/nolson/Documents/Mendeley Desktop/Schmidt, Matias Rodrigues, von Mering - 2015 - Limits to robustness and reproducibility in the demarcation of operational taxonomic unit.pdf:pdf},
+isbn = {1462-2920 (Electronic)\n1462-2912 (Linking)},
+issn = {14622920},
+journal = {Environmental Microbiology},
+number = {5},
+pages = {1689--1706},
+pmid = {25156547},
+title = {{Limits to robustness and reproducibility in the demarcation of operational taxonomic units}},
+volume = {17},
+year = {2015}
+}
+
+@article{Amore2016,
+abstract = {Background: In the last 5 years, the rapid pace of innovations and improvements in sequencing technologies has completely changed the landscape of metagenomic and metagenetic experiments. Therefore, it is critical to benchmark the various methodologies for interrogating the composition of microbial communities, so that we can assess their strengths and limitations. The most common phylogenetic marker for microbial community diversity studies is the 16S ribosomal RNA gene and in the last 10 years the field has moved from sequencing a small number of amplicons and samples to more complex studies where thousands of samples and multiple different gene regions are interrogated. Results: We assembled 2 synthetic communities with an even (EM) and uneven (UM) distribution of archaeal and bacterial strains and species, as metagenomic control material, to assess performance of different experimental strategies. The 2 synthetic communities were used in this study, to highlight the limitations and the advantages of the leading sequencing platforms: MiSeq (Illumina), The Pacific Biosciences RSII, 454 GS-FLX/+ (Roche), and IonTorrent (Life Technologies). We describe an extensive survey based on synthetic communities using 3 experimental designs (fusion primers, universal tailed tag, ligated adaptors) across the 9 hypervariable 16S rDNA regions. We demonstrate that library preparation methodology can affect data interpretation due to different error and chimera rates generated during the procedure. The observed community composition was always biased, to a degree that depended on the platform, sequenced region and primer choice. However, crucially, our analysis suggests that 16S rRNA sequencing is still quantitative, in that relative changes in abundance of taxa between samples can be recovered, despite these biases. Conclusion: We have assessed a range of experimental conditions across several next generation sequencing platforms using the most up-to-date configurations. We propose that the choice of sequencing platform and experimental design needs to be taken into consideration in the early stage of a project by running a small trial consisting of several hypervariable regions to quantify the discriminatory power of each region. We also suggest that the use of a synthetic community as a positive control would be beneficial to identify the potential biases and procedural drawbacks that may lead to data misinterpretation. The results of this study will serve as a guideline for making decisions on which experimental condition and sequencing platform to consider to achieve the best microbial profiling.},
+author = {Amore, Rosalinda D and Ijaz, Umer Zeeshan and Schirmer, Melanie and Kenny, John G and Gregory, Richard and Darby, Alistair C and Quince, Christopher and Hall, Neil and {D 'amore}, Rosalinda and {Zeeshan Ijaz}, Umer and Schirmer, Melanie and Kenny, John G and Gregory, Richard and Darby, Alistair C and Shakya, Migun and Podar, Mircea and Quince, Christopher and Hall, Neil},
+doi = {10.1186/s12864-015-2194-9},
+file = {:Users/nolson/Documents/Mendeley Desktop/Amore et al. - 2016 - A comprehensive benchmarking study of protocols and sequencing platforms for 16S rRNA community profiling.pdf:pdf},
+issn = {1471-2164},
+journal = {BMC Genomics},
+mendeley-groups = {16S rRNA,16S rRNA/16S taxonomic classification},
+pages = {1--40},
+publisher = {BMC Genomics},
+title = {{A comprehensive benchmarking study of protocols and sequencing platforms for 16S rRNA community profiling}},
+url = {http://dx.doi.org/10.1186/s12864-015-2194-9},
+volume = {17},
+year = {2016}
+}
+
+@article{Westcott2015,
+abstract = {Background. 16S rRNA gene sequences are routinely assigned to operational taxonomic units (OTUs) that are then used to analyze complex microbial communities. A number of methods have been employed to carry out the assignment of 16S rRNA gene sequences to OTUs leading to confusion over which method is optimal. A recent study suggested that a clustering method should be selected based on its ability to generate stable OTU assignments that do not change as additional sequences are added to the dataset. In contrast, we contend that the quality of the OTU assignments, the ability of the method to properly represent the distances between the sequences, is more important. Methods. Our analysis implemented six de novo clustering algorithms including the single linkage, complete linkage, average linkage, abundance-based greedy clustering, distance-based greedy clustering, and Swarm and the open and closed-reference methods. Using two previously published datasets we used the Matthew's Correlation Coefficient (MCC) to assess the stability and quality of OTU assignments. Results. The stability of OTU assignments did not reflect the quality of the assignments. Depending on the dataset being analyzed, the average linkage and the distance and abundance-based greedy clustering methods generated OTUs that were more likely to represent the actual distances between sequences than the open and closed-reference methods. We also demonstrated that for the greedy algorithms VSEARCH produced assignments that were comparable to those produced by USEARCH making VSEARCH a viable free and open source alternative to USEARCH. Further interrogation of the reference-based methods indicated that when USEARCH or VSEARCH were used to identify the closest reference, the OTU assignments were sensitive to the order of the reference sequences because the reference sequences can be identical over the region being considered. More troubling was the observation that while both USEARCH and VSEARCH have a high level of sensitivity to detect reference sequences, the specificity of those matches was poor relative to the true best match. Discussion. Our analysis calls into question the quality and stability of OTU assignments generated by the open and closed-reference methods as implemented in current version of QIIME. This study demonstrates that de novo methods are the optimal method of assigning sequences into OTUs and that the quality of these assignments needs to be assessed for multiple methods to identify the optimal clustering method for a particular dataset.},
+author = {Westcott, Sarah L and Schloss, Patrick D},
+doi = {10.7287/peerj.preprints.1466v1},
+file = {:Users/nolson/Documents/Mendeley Desktop/Westcott, Schloss - 2015 - De novo clustering methods out-perform reference-based methods for assigning 16S rRNA gene sequences to opera.pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Westcott, Schloss - 2015 - De novo clustering methods out-perform reference-based methods for assigning 16S rRNA gene sequences to op(2).pdf:pdf},
+issn = {2167-8359},
+journal = {PeerJ},
+keywords = {16S rRNA gene sequences,Bioinformatics,Culture-independent,Microbial ecology,Microbiome,Next generation sequencing,OTU,QIIME,mothur},
+mendeley-groups = {16S rRNA/16S taxonomic classification},
+pages = {e1487},
+pmid = {26664811},
+title = {{De novo clustering methods out-perform reference-based methods for assigning 16S rRNA gene sequences to operational taxonomic units}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/26664811\nhttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC4675110},
+volume = {3},
+year = {2015}
+}
+
+@article{Wu2013,
+abstract = {Our current understanding of the taxonomic and phylogenetic diversity of cellular organisms, especially the bacteria and archaea, is mostly based upon studies of sequences of the small- subunit rRNAs (ssu-rRNAs). To address the limitation of ssu-rRNA as a phylogenetic marker, such as copy number variation among organisms and complications introduced by horizontal gene transfer, convergent evolution, or evolution rate variations, we have identified protein- coding gene families as alternative Phylogenetic and Phylogenetic Ecology markers (PhyEco). Current nucleotide sequence similarity based Operational Taxonomic Unit (OTU) classification methods are not readily applicable to amino acid sequences of PhyEco markers. We report here the development of TreeOTU, a phylogenetic tree structure based OTU classification method that takes into account of differences in rates of evolution between taxa and between genes. OTU sets built by TreeOTU are more faithful to phylogenetic tree structures than sequence clustering (non phylogenetic) methods for ssu-rRNAs. OTUs built from phylogenetic trees of protein coding PhyEco markers are comparable to our current taxonomic classification at different levels. With the included OTU comparing tools, the TreeOTU is robust in phylogenetic referencing with different phylogenetic markers and trees.},
+archivePrefix = {arXiv},
+arxivId = {1308.6333},
+author = {Wu, Dongying and Doroud, Ladan and Eisen, Jonathan a.},
+eprint = {1308.6333},
+file = {:Users/nolson/Documents/Mendeley Desktop/Wu, Doroud, Eisen - 2013 - TreeOTU Operational Taxonomic Unit Classification Based on Phylogenetic Trees.pdf:pdf},
+journal = {Arxiv.Org},
+mendeley-groups = {16S rRNA/16S taxonomic classification,Missing PDF},
+pages = {23},
+title = {{TreeOTU\: Operational Taxonomic Unit Classification Based on Phylogenetic Trees}},
+url = {http://arxiv.org/abs/1308.6333},
+year = {2013}
+}
+
+@article{Kopylova2014,
+author = {Kopylova, Evguenia and Navas-molina, Jose A and Mercier, C{\'{e}}line and Xu, Zech},
+doi = {10.1128/mSystems.00003-15.Editor},
+file = {:Users/nolson/Documents/Mendeley Desktop/Kopylova et al. - 2014 - Open-Source Sequence Clustering Methods Improve the State Of the Art.pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Kopylova et al. - 2014 - Open-Source Sequence Clustering Methods Improve the State Of the Art(2).pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Kopylova et al. - 2014 - Open-Source Sequence Clustering Methods Improve the State Of the Art(3).pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Kopylova et al. - 2014 - Open-Source Sequence Clustering Methods Improve the State Of the Art(4).pdf:pdf},
+issn = {2379-5077},
+journal = {mSystems},
+keywords = {amplicon sequencing,analysis,enabled new detailed investigations,generate hundreds of gigabytes,into the human micro-,microbial community,of data in a,operational taxonomic units,sequence clustering,single run and have,urrent dna sequencing technologies},
+mendeley-groups = {16S rRNA/16S Clustering},
+number = {1},
+pages = {1--16},
+title = {{Open-Source Sequence Clustering Methods Improve the State Of the Art}},
+volume = {1},
+year = {2014}
+}
+
+@article{Schloss2016,
+author = {Schloss, Patrick D},
+file = {:Users/nolson/Documents/Mendeley Desktop/Schloss - 2016 - Application of database-independent approach to assess the quality of OTU picking methods.pdf:pdf},
+mendeley-groups = {16S rRNA},
+title = {{Application of database-independent approach to assess the quality of OTU picking methods}},
+year = {2016}
+}
+
+@article{He2015,
+abstract = {BACKGROUND: The operational taxonomic unit (OTU) is widely used in microbial ecology. Reproducibility in microbial ecology research depends on the reliability of OTU-based 16S ribosomal subunit RNA (rRNA) analyses. RESULTS: Here, we report that many hierarchical and greedy clustering methods produce unstable OTUs, with membership that depends on the number of sequences clustered. If OTUs are regenerated with additional sequences or samples, sequences originally assigned to a given OTU can be split into different OTUs. Alternatively, sequences assigned to different OTUs can be merged into a single OTU. This OTU instability affects alpha-diversity analyses such as rarefaction curves, beta-diversity analyses such as distance-based ordination (for example, Principal Coordinate Analysis (PCoA)), and the identification of differentially represented OTUs. Our results show that the proportion of unstable OTUs varies for different clustering methods. We found that the closed-reference method is the only one that produces completely stable OTUs, with the caveat that sequences that do not match a pre-existing reference sequence collection are discarded. CONCLUSIONS: As a compromise to the factors listed above, we propose using an open-reference method to enhance OTU stability. This type of method clusters sequences against a database and includes unmatched sequences by clustering them via a relatively stable de novo clustering method. OTU stability is an important consideration when analyzing microbial diversity and is a feature that should be taken into account during the development of novel OTU clustering methods.},
+author = {He, Yan and Caporaso, J Gregory and Jiang, Xiao-Tao and Sheng, Hua-Fang and Huse, Susan M and Rideout, Jai Ram and Edgar, Robert C and Kopylova, Evguenia and Walters, William A and Knight, Rob and Zhou, Hong-Wei},
+doi = {10.1186/s40168-015-0081-x},
+file = {:Users/nolson/Documents/Mendeley Desktop/He et al. - 2015 - Stability of operational taxonomic units an important but neglected property for analyzing microbial diversity.pdf:pdf},
+issn = {2049-2618},
+journal = {Microbiome},
+language = {en},
+mendeley-groups = {16S rRNA,16S rRNA/16S Clustering},
+month = {may},
+number = {1},
+pages = {20},
+pmid = {25995836},
+publisher = {???},
+title = {{Stability of operational taxonomic units: an important but neglected property for analyzing microbial diversity}},
+url = {http://www.microbiomejournal.com/content/3/1/20},
+volume = {3},
+year = {2015}
+}
+
+@article{Ghodsi2011,
+abstract = {BACKGROUND: Clustering is a fundamental operation in the analysis of biological sequence data. New DNA sequencing technologies have dramatically increased the rate at which we can generate data, resulting in datasets that cannot be efficiently analyzed by traditional clustering methods.This is particularly true in the context of taxonomic profiling of microbial communities through direct sequencing of phylogenetic markers (e.g. 16S rRNA) - the domain that motivated the work described in this paper. Many analysis approaches rely on an initial clustering step aimed at identifying sequences that belong to the same operational taxonomic unit (OTU). When defining OTUs (which have no universally accepted definition), scientists must balance a trade-off between computational efficiency and biological accuracy, as accurately estimating an environment's phylogenetic composition requires computationally-intensive analyses. We propose that efficient and mathematically well defined clustering methods can benefit existing taxonomic profiling approaches in two ways: (i) the resulting clusters can be substituted for OTUs in certain applications; and (ii) the clustering effectively reduces the size of the data-sets that need to be analyzed by complex phylogenetic pipelines (e.g., only one sequence per cluster needs to be provided to downstream analyses).
+
+RESULTS: To address the challenges outlined above, we developed DNACLUST, a fast clustering tool specifically designed for clustering highly-similar DNA sequences.Given a set of sequences and a sequence similarity threshold, DNACLUST creates clusters whose radius is guaranteed not to exceed the specified threshold. Underlying DNACLUST is a greedy clustering strategy that owes its performance to novel sequence alignment and k-mer based filtering algorithms.DNACLUST can also produce multiple sequence alignments for every cluster, allowing users to manually inspect clustering results, and enabling more detailed analyses of the clustered data.
+
+CONCLUSIONS: We compare DNACLUST to two popular clustering tools: CD-HIT and UCLUST. We show that DNACLUST is about an order of magnitude faster than CD-HIT and UCLUST (exact mode) and comparable in speed to UCLUST (approximate mode). The performance of DNACLUST improves as the similarity threshold is increased (tight clusters) making it well suited for rapidly removing duplicates and near-duplicates from a dataset, thereby reducing the size of the data being analyzed through more elaborate approaches.},
+author = {Ghodsi, Mohammadreza and Liu, Bo and Pop, Mihai},
+doi = {10.1186/1471-2105-12-271},
+file = {:Users/nolson/Documents/Mendeley Desktop/Ghodsi, Liu, Pop - 2011 - DNACLUST accurate and efficient clustering of phylogenetic marker genes.pdf:pdf},
+isbn = {10.1186/1471-2105-12-271},
+issn = {1471-2105},
+journal = {BMC bioinformatics},
+keywords = {Algorithms,Cluster Analysis,Genetic Markers,Phylogeny,Sequence Alignment,Sequence Analysis, DNA,Software},
+language = {en},
+mendeley-groups = {16S rRNA/16S Clustering},
+month = {jan},
+number = {1},
+pages = {271},
+pmid = {21718538},
+publisher = {BioMed Central Ltd},
+title = {{DNACLUST: accurate and efficient clustering of phylogenetic marker genes.}},
+url = {http://www.biomedcentral.com/1471-2105/12/271},
+volume = {12},
+year = {2011}
+}
+
+@article{Schmidt2015,
+abstract = {The demarcation of operational taxonomic units (OTUs) from complex sequence data sets is a key step in contemporary studies of microbial ecology. However, as biologically motivated ‘optimal' OTU- binning algorithms remain elusive, many conceptu- ally distinct approaches continue to be used. Using a global data set of 887 870 bacterial 16S rRNA gene sequences, we objectively quantified biases intro- duced by several widely employed sequence cluster- ing algorithms. We found that OTU-binning methods often provided surprisingly non-equivalent partitions of identical data sets, notably when clustering to the same nominal similarity thresholds; and we quanti- fied the resulting impact on ecological data descrip- tion for a well-defined human skin microbiome data set. We observed that some methods were very robust to varying clustering thresholds, while others were found to be highly susceptible even to slight threshold variations. Moreover, we comprehensively quantified the impact of the choice of 16S rRNA gene subregion, as well as of data set scope and context on algorithm performance. Our findings may contribute to an enhanced comparability of results across sequence-processing pipelines, and we arrive at rec- ommendations towards higher levels of standardiza- tion in established workflows. Introduction},
+author = {Schmidt, Thomas S B and {Matias Rodrigues}, Jo??o F. and von Mering, Christian},
+doi = {10.1111/1462-2920.12610},
+file = {:Users/nolson/Documents/Mendeley Desktop/Schmidt, Matias Rodrigues, von Mering - 2015 - Limits to robustness and reproducibility in the demarcation of operational taxonomic unit.pdf:pdf},
+isbn = {1462-2920 (Electronic)\n1462-2912 (Linking)},
+issn = {14622920},
+journal = {Environmental Microbiology},
+number = {5},
+pages = {1689--1706},
+pmid = {25156547},
+title = {{Limits to robustness and reproducibility in the demarcation of operational taxonomic units}},
+volume = {17},
+year = {2015}
+}
+
+@article{Schloss2011,
+abstract = {In spite of technical advances that have provided increases in orders of magnitude in sequencing coverage, microbial ecologists still grapple with how to interpret the genetic diversity represented by the 16S rRNA gene. Two widely used approaches put sequences into bins based on either their similarity to reference sequences (i.e., phylotyping) or their similarity to other sequences in the community (i.e., operational taxonomic units [OTUs]). In the present study, we investigate three issues related to the interpretation and implementation of OTU-based methods. First, we confirm the conventional wisdom that it is impossible to create an accurate distance-based threshold for defining taxonomic levels and instead advocate for a consensus-based method of classifying OTUs. Second, using a taxonomic-independent approach, we show that the average neighbor clustering algorithm produces more robust OTUs than other hierarchical and heuristic clustering algorithms. Third, we demonstrate several steps to reduce the computational burden of forming OTUs without sacrificing the robustness of the OTU assignment. Finally, by blending these solutions, we propose a new heuristic that has a minimal effect on the robustness of OTUs and significantly reduces the necessary time and memory requirements. The ability to quickly and accurately assign sequences to OTUs and then obtain taxonomic information for those OTUs will greatly improve OTU-based analyses and overcome many of the challenges encountered with phylotype-based methods.},
+author = {Schloss, Patrick D. and Westcott, Sarah L.},
+doi = {10.1128/AEM.02810-10},
+file = {:Users/nolson/Desktop/Appl. Environ. Microbiol.-2011-Schloss-3219-26.pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Schloss, Westcott - 2011 - Assessing and Improving Methods Used in Operational Taxonomic Unit-Based Approaches for 16S rRNA Gene Sequenc.pdf:pdf},
+issn = {0099-2240},
+journal = {Applied and Environmental Microbiology},
+keywords = {16S,16S: genetics,Bacterial,Bacterial: chemistry,Bacterial: genetics,Cluster Analysis,Computational Biology,Computational Biology: methods,DNA,Metagenomics,Metagenomics: methods,Phylogeny,RNA,Ribosomal,Ribosomal: chemistry,Ribosomal: genetics,Sequence Analysis,Sequence Analysis: methods},
+mendeley-groups = {16S rRNA,16S rRNA/16S taxonomic classification,16S rRNA/16S Clustering},
+month = {may},
+number = {10},
+pages = {3219--3226},
+pmid = {21421784},
+title = {{Assessing and Improving Methods Used in Operational Taxonomic Unit-Based Approaches for 16S rRNA Gene Sequence Analysis}},
+url = {http://aem.asm.org/cgi/doi/10.1128/AEM.02810-10},
+volume = {77},
+year = {2011}
+}
+
+@article{Huse2010,
+author = {Huse, Susan M and Welch, David Mark and Morrison, Hilary G and Sogin, Mitchell L},
+doi = {10.1111/j.1462-2920.2010.02193.x},
+file = {:Users/nolson/Documents/Mendeley Desktop/Huse et al. - 2010 - Ironing out the wrinkles in the rare biosphere through improved OTU clustering.pdf:pdf},
+issn = {1462-2920},
+journal = {Environmental microbiology},
+keywords = {Biodiversity,Cluster Analysis,DNA, Bacterial,DNA, Bacterial: chemistry,DNA, Bacterial: genetics,DNA, Ribosomal,DNA, Ribosomal: chemistry,DNA, Ribosomal: genetics,Environmental Microbiology,Escherichia coli,Escherichia coli: genetics,Metagenomics,Metagenomics: methods,RNA, Ribosomal, 16S,RNA, Ribosomal, 16S: genetics,Sequence Alignment,Sequence Alignment: methods,Sequence Analysis, DNA,Staphylococcus epidermidis,Staphylococcus epidermidis: genetics},
+mendeley-groups = {16S rRNA/16S diversitystudies,16S rRNA,16S rRNA/16S Seq errors,16S rRNA/16S Clustering},
+month = {jul},
+number = {7},
+pages = {1889--98},
+pmid = {20236171},
+title = {{Ironing out the wrinkles in the rare biosphere through improved OTU clustering.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2909393&tool=pmcentrez&rendertype=abstract},
+volume = {12},
+year = {2010}
+}
+
+@article{Chen2013,
+author = {Chen, Wei and Zhang, Clarence K. and Cheng, Yongmei and Zhang, Shaowu and Zhao, Hongyu},
+doi = {10.1371/journal.pone.0070837},
+file = {:Users/nolson/Documents/Mendeley Desktop/Chen et al. - 2013 - A Comparison of Methods for Clustering 16S rRNA Sequences into OTUs.pdf:pdf},
+issn = {19326203},
+journal = {PLoS ONE},
+mendeley-groups = {16S rRNA/16S Clustering},
+number = {8},
+pmid = {23967117},
+title = {{A Comparison of Methods for Clustering 16S rRNA Sequences into OTUs}},
+volume = {8},
+year = {2013}
+}
+
+@article{Chao2014,
+author = {Chao, Anne and Gotelli, Nicholas J. and Hsieh, T. C. and Sander, Elizabeth L. and Ma, K. H. and Colwell, Robert K. and Ellison, Aaron M.},
+doi = {10.1890/13-0133.1},
+file = {:Users/nolson/Documents/Mendeley Desktop/Chao et al. - 2014 - Rarefaction and extrapolation with Hill numbers A framework for sampling and estimation in species diversity studie.pdf:pdf},
+isbn = {0012-9615},
+issn = {00129615},
+journal = {Ecological Monographs},
+keywords = {Abundance data,Diversity,Extrapolation,Hill numbers,Incidence data,Interpolation,Prediction,Rarefaction,Sample coverage,Species richness},
+mendeley-groups = {Ecology Diversity},
+number = {1},
+pages = {45--67},
+title = {{Rarefaction and extrapolation with Hill numbers: A framework for sampling and estimation in species diversity studies}},
+volume = {84},
+year = {2014}
+}
+
+@article{Ricotta2007,
+author = {Ricotta, Carlo},
+doi = {10.1007/s10441-007-9008-7},
+file = {:Users/nolson/Documents/Mendeley Desktop/Ricotta - 2007 - A semantic taxonomy for diversity measures.pdf:pdf},
+isbn = {00015342 (ISSN)},
+issn = {00015342},
+journal = {Acta Biotheoretica},
+keywords = {Complexity,Compositional diversity matrix,Divergence,Evenness,Pairwise species distances,Richness},
+mendeley-groups = {Ecology Diversity},
+number = {1},
+pages = {23--33},
+pmid = {17486413},
+title = {{A semantic taxonomy for diversity measures}},
+volume = {55},
+year = {2007}
+}
+
+@article{Tuomisto2012,
+annote = {species diversity - two components richness and evenness},
+author = {Tuomisto, Hanna},
+doi = {10.1111/j.1600-0706.2011.19897.x},
+file = {:Users/nolson/Documents/Mendeley Desktop/Tuomisto - 2012 - An updated consumer's guide to evenness and related indices.pdf:pdf},
+isbn = {1600-0706},
+issn = {00301299},
+journal = {Oikos},
+keywords = {alpha diversity,evenness,richness},
+mendeley-groups = {Ecology Diversity/Diversity Metric Performance,Ecology Diversity/alpha diversity},
+mendeley-tags = {alpha diversity,evenness,richness},
+number = {8},
+pages = {1203--1218},
+title = {{An updated consumer's guide to evenness and related indices}},
+volume = {121},
+year = {2012}
+}
+
+@article{Bunge2014,
+author = {Bunge, John and Willis, Amy and Walsh, Fiona},
+doi = {10.1146/annurev-statistics-022513-115654},
+file = {:Users/nolson/Documents/Mendeley Desktop/Bunge, Willis, Walsh - 2014 - Estimating the Number of Species in Microbial Diversity Studies.pdf:pdf},
+issn = {2326-8298},
+journal = {Annual Review of Statistics and Its Application},
+keywords = {mixed,number of classes,poisson,sample coverage,species richness,zero truncation,$\alpha$ -diversity},
+mendeley-groups = {16S rRNA},
+number = {1},
+pages = {427--445},
+title = {{Estimating the Number of Species in Microbial Diversity Studies}},
+url = {http://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-022513-115654},
+volume = {1},
+year = {2014}
+}
+
+@article{Chiu2015,
+author = {Chiu, Chun-Huo and Chao, Anne},
+doi = {10.7287/peerj.preprints.11},
+file = {:Users/nolson/Documents/Mendeley Desktop/Chiu, Chao - 2015 - Estimating and comparing microbial diversity in the presence of sequencing errors.pdf:pdf},
+isbn = {2255782855},
+issn = {2167-9843},
+journal = {PeerJ},
+mendeley-groups = {Ecology Diversity},
+pages = {1--13},
+title = {{Estimating and comparing microbial diversity in the presence of sequencing errors}},
+year = {2015}
+}
+
+@article{Schirmer2015,
+author = {Schirmer, Melanie and Ijaz, Umer Z. and D'Amore, Rosalinda and Hall, Neil and Sloan, William T. and Quince, Christopher},
+doi = {10.1093/nar/gku1341},
+file = {:Users/nolson/Documents/Mendeley Desktop/Schirmer et al. - 2015 - Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform(3).pdf:pdf;:Users/nolson/Documents/Mendeley Desktop/Schirmer et al. - 2015 - Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform(4).pdf:pdf},
+isbn = {1362-4962 (Electronic)\r0305-1048 (Linking)},
+issn = {13624962},
+journal = {Nucleic Acids Research},
+mendeley-groups = {16S rRNA/16S Seq errors},
+number = {6},
+pmid = {25586220},
+title = {{Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform}},
+volume = {43},
+year = {2015}
+}
+
+
+@article{Amore2016,
+author = {Amore, Rosalinda D and Ijaz, Umer Zeeshan and Schirmer, Melanie and Kenny, John G and Gregory, Richard and Darby, Alistair C and Quince, Christopher and Hall, Neil and {D 'amore}, Rosalinda and {Zeeshan Ijaz}, Umer and Schirmer, Melanie and Kenny, John G and Gregory, Richard and Darby, Alistair C and Shakya, Migun and Podar, Mircea and Quince, Christopher and Hall, Neil},
+doi = {10.1186/s12864-015-2194-9},
+file = {:Users/nolson/Documents/Mendeley Desktop/Amore et al. - 2016 - A comprehensive benchmarking study of protocols and sequencing platforms for 16S rRNA community profiling.pdf:pdf},
+issn = {1471-2164},
+journal = {BMC Genomics},
+mendeley-groups = {16S rRNA,16S rRNA/16S taxonomic classification},
+pages = {1--40},
+publisher = {BMC Genomics},
+title = {{A comprehensive benchmarking study of protocols and sequencing platforms for 16S rRNA community profiling}},
+url = {http://dx.doi.org/10.1186/s12864-015-2194-9},
+volume = {17},
+year = {2016}
+}

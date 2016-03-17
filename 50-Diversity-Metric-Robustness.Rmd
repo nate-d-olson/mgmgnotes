@@ -1,0 +1,14 @@
+# Ecological Diversity Robustness 
+## Overview  
+* Background
+* Evaluating alpha and beta diversity metrics  
+* Factors  
+    - preprocessing methods  
+    - data characteristics  
+        + sequencing error rates  
+        + primer region  
+        + read length  
+* OTU table  
+    - depth/ coverage - sparsity  
+    - when does the diversity metric break?  
+

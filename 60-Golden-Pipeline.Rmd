@@ -1,0 +1,25 @@
+# Gold Standard Pipeline
+* Trim primers - dereplicate  
+* Chimera check? - multiple methods orthogonal methods?, annotate don't filter  
+* BLAST 100% - all perfect matches  
+* Unmatched  
+    - Multiple sequence alignment  
+        + Filter sequences with low alignment scores  
+    - phylogenetic placement  
+* Generate OTUs for different branch distances  
+* Keep unique singletons - based on distance from non-singleton clusters, vary similarity based on cluster size, likelihood model for whether sequencing error or biological mutation.  
+    - Rare orgs highly similar to large OTU less likely ecologically different?  
+* Alternative taxa classification  
+    - Multiple methods  
+        + pairwise alignment  
+        + kmer  
+        + phylogenetic placement  
+        + other...  
+    - Multiple reference databases  
+        + evaluate individual sequences based on confidence - presence in multiple databases, infernal and rnammer alignment score?  
+            * supporting sequence data - whole genome, sanger, 16S PCR from isolate  
+            * likelihood of being a chimera  
+        + Compare other methods to results generated using gold standard pipeline  
+            * performance metrics  
+* Copy number correction  
+    - based on phylogenetic placement

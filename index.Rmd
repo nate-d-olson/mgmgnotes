@@ -1,22 +1,197 @@
---- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
-date: "`r Sys.Date()`"
+---
 knit: "bookdown::render_book"
-documentclass: book
+title: "Measurement Science of Metagenomics"
+output:
+  -bookdown::gitbook
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 ---
 
-# Prerequisites
-
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
-
-For now, you have to install the development versions of **bookdown** from Github:
-
-```{r eval=FALSE}
-devtools::install_github("rstudio/bookdown")
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, formatR.indent = 2)
+lapply(c('DT'), function(pkg) {
+  if (!requireNamespace(pkg)) install.packages(pkg)
+})
+if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
 ```
+# Metrology of Metagenomics  
+## Microbiome  
+## Measuring Microbiomes 
+- whole metagenomic sequencing  
+- marker-gene metagenomics  
+- 16S vs. WMS   
+
+## Metrology  
+- No not meteorlogy  
+- Biological variability and measurement error  
+    + Measurement Error  
+        * Systematic - results in systematic bias  
+        * Random - increases uncertainty in results but provides an accurate measure of the true mean given sufficient sample size  
+    + Biological Noise  
+        * Sources of variability due to biological complexity of the system e.g. difference in results based on 16S rRNA gene region  
+- replicate, repeat, and reproduce  
+    + SI redefining the kilogram example???  
+    + Uncertainty budgets  
+        * top-down vs. bottom-up  
+        * analytical chemsitry text  
+    + Orthogonal methods  
+        * Genome in a bottle example 
+
+<!--
 
 Remember each Rmd file contains one and only one chapter.
+
+## Book Outline
+
+## Metagenomics  
+* Microbiome  
+* Measuring Microbiomes 
+    - whole metagenomic sequencing  
+    - marker-gene metagenomics  
+        + 16S rRNA gene  
+
+## Marker-gene metagenomics measurement process  
+* Measurement Process overview 
+    - Sample collection  
+    - Sample Processing  
+    - Sequencing  
+    - Data analysis  
+        + fastq to OTU  
+        + Downstream analysis  
+            * differential abundance  
+            * alpha diversity  
+            * beta diversity  
+
+## Biological variability and measurement error  
+* Measurement Error  
+    - Systematic - results in systematic bias  
+    - Random - increases uncertainty in results but provides an accurate measure of the true mean given sufficient sample size  
+* Biological Noise  
+    - Sources of variability due to biological complexity of the system e.g. difference in results based on 16S rRNA gene region  
+* replicate, repeat, and reproduce  
+    - Uncertainty budgets  
+        + top-down vs. bottom-up  
+    - Orthogonal methods  
+
+## Sources of variability and error for marker-gene metagenomics  
+* fishbone diagram  
+    - Sample collection  
+    - Sample Processing  
+        + DNA extraction  
+        + PCR/ indexing  
+        + Normalization/ Pooling  
+    - Sequencing  
+        + sequencing reaction  
+        + imaging  
+        + base calling  
+    - Data analysis  
+        + Pre-processing (wheat from the chaf)  
+            * quality filter/ read trimming  
+            * chimera detection  
+            * clustering  
+        + Taxonomic classification  
+        + Downstream analysis  
+            * differential abundance  
+            * alpha diversity  
+            * beta diversity  
+* cause effect diagram  
+    - pre-processing, normalization/ transformation methods used to address measurement error  
+
+## Characterizing Measurement Process 
+* Tools  
+    - Validation  
+        + Fit for purpose - comparison to gold standard method or reference material  
+            * no gold standard methods - only community accepted defactor standards  
+    - Benchmarking  
+        + Comparison to known truth  
+        + Evaluating results based on expectation  
+    - Robustness testing  
+        + Impact of procedure or step on results  
+* Characterization of Data Analysis Processing  
+    - Wet lab vs. dry lab  
+    - Validation  
+        + Currently not applicable ... -> most robust method  
+    - Benchmarking  
+        + Observed results vs. Truth  
+            * Dataset with known true value - can be obtained using  
+                - gold standard method  
+                - mock communities: in vitro or in silico   
+                    + limitations and assumptions  
+                - Mixtures
+                    + Provides a degree of known truth  
+            * Performance metrics  
+                - Quantitative  
+                    + Variability - standard deviation/ variance  
+                    + Bias - mean squared error??? (true value)  
+        + Observed results vs. assumptions  
+            * No general dataset requirements  
+            * Performance metrics  
+                - evaluate results based on method assumption, e.g. Schloss clustering distance  
+    - Robustness Testing  
+        + Used to evaluate impact of different methods on results  
+        + Comparison of orthogonal methods  
+            * For fundamentally different methods (different assumptions and heuristics)  
+                - Can evaluate precision (variability), not necessarily accuracy but less susceptible to bias than is methods are based on the same assumptions or heuristics  
+        + Used to evaluate how different steps in the process affect the results  
+
+## Microbiome Mixture Benchmarking Dataset
+* Mixture Study  
+
+## Robustness Testing Ecological Diversity 
+* Evaluating alpha and beta diversity metrics  
+* Factors  
+    - preprocessing methods  
+    - data characteristics  
+        + sequencing error rates  
+        + primer region  
+        + read length  
+* OTU table  
+    - depth/ coverage - sparsity  
+    - when does the diversity metric break?  
+
+## Guideance on developing an assessment framework
+* Outline measurement process - fishbone diagram  
+* Differentiate between biological variability and measurement error  
+    - How are these two sources of variability currently addressed in pipelines  
+    - Are there any known sources of biological variability not currently being addressed  
+* What is known about each source of variability?  
+    - uncertainty budget?  
+    - dark uncertianty - unaccounted for variability?  
+* Robustness testing  
+    - determine largest source of bias/ uncertianty in measurement process  
+* Charaterize individual measurement process steps based on robustness testing/ sensitivity analysis  
+    - benchmarking datasets  
+        + environmental  
+        + in lab prepared material - combination of known samples  
+        + in lab prepared material - combination of unknown samples  
+        + in silico - various levels of simulation based on reference and environmental data availablility  
+    - for each type of dataset summarize benefits and limitations to each  
+
+## Proposed Gold Standard Analysis Method
+* Trim primers - dereplicate  
+* Chimera check? - multiple methods orthogonal methods?, annotate don't filter  
+* BLAST 100% - all perfect matches  
+* Unmatched  
+    - Multiple sequence alignment  
+        + Filter sequences with low alignment scores  
+    - phylogenetic placement  
+* Generate OTUs for different branch distances  
+* Keep unique singletons - based on distance from non-singleton clusters, vary similarity based on cluster size, likelihood model for whether sequencing error or biological mutation.  
+    - Rare orgs highly similar to large OTU less likely ecologically different?  
+* Alternative taxa classification  
+    - Multiple methods  
+        + pairwise alignment  
+        + kmer  
+        + phylogenetic placement  
+        + other...  
+    - Multiple reference databases  
+        + evaluate individual sequences based on confidence - presence in multiple databases, infernal and rnammer alignment score?  
+            * supporting sequence data - whole genome, sanger, 16S PCR from isolate  
+            * likelihood of being a chimera  
+        + Compare other methods to results generated using gold standard pipeline  
+            * performance metrics  
+* Copy number correction  
+    - based on phylogenetic placement
+-->
+
