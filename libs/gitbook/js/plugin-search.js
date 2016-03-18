@@ -153,7 +153,7 @@ require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
 
     gitbook.events.bind("start", function(e, config) {
         // [Yihui] disable search
-        if (config.search === false) return;
+        if (!config.search) return;
         collapse = !config.toc || config.toc.collapse === 'section' ||
           config.toc.collapse === 'subsection';
 
