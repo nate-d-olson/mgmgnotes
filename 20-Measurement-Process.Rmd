@@ -57,7 +57,7 @@ The part consists of five main steps:
 - Collection of sample that is representative of population being studied  
     - Kitty Biome study as an example of sample heterogeneity  
 - Impact of sample storage   
-    - Fecal storage study    
+    - @Flores2015 evaluated impact of storage conditions on 16S metagenomics.  The study results supported the use of RNALater as storage media after evaluating the different temperature, media, and duration for biological replicate stool samples. The results were evaluated using intraclass correlation coefficients as well as $\alpha$ and $\beta$ diversity. __DATA NOT PUBLICALLY AVAILABLE!!!!!__    
     - Old coral study?  
 
 ### Sample Processing
@@ -96,7 +96,13 @@ Considerations:
 #### PCR primers (optional barcoded primers)  
 
 @Albertsen2015 performed both an _in silico_ and _in vitro_ comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets. The author's concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system.   
-  
+
+@Esling2015 developed a latin square barcode design to facilitate detection and removal of cross-contamination along with tools for implenting their recomended barcoding methods, https://github.com/esling/mistagging.  
+
+@Amore2016 evaluated the impact of primer mismatches using a mock community dataset by correlating abundance with mismatches.  
+
+@Engelbrektson2010 explored the impact of different primers, variable regions, and amplicon legnths on $\alpha diversity metrics for termine gut samples. Amplicon lengths impacted diversity and richness estimates but primers targeting the same region had consistent results.   
+
 #### PCR reagents  
 
 * Polymerase - high fidelity  
@@ -135,12 +141,18 @@ Barcoded 16S PCR primers were used in the study therefore the impact of barcodes
     * Uneven sequencing depth - impact of coverage  
 
 ### Sequencing  
+* Sequencing platforms
+    * Illumina - MiSeq, HiSeq, GAII 
+    * Ion Torrent  
+    * PacBio  
+    * Oxford Nanopore - Minion  
+* Factors impacting measurement results  
+    * Read length    
+    * Sequencing chemistry  
+* Studies comparing platforms  
+    * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM. Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
 
-* Sequencing platform  
-  * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM.  
-        * Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
-* Read length    
-* Sequencing chemistry    
+   
 
 ## Seq to OTU 
 
