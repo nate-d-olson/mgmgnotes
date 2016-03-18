@@ -2,7 +2,7 @@
 Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues. 
 See @Goodrich2014 for a review of 16S rRNA marker gene metagenomics measurement process and general recomendations for conducting a microbiome study.  
 
-@Zhou2011 Used biological and technical replicates with a _Shewanella oneidenis MR-1_ to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the $B$ diversity and relative abundance between replicates. 
+@Zhou2011 Used biological and technical replicates with a _Shewanella oneidenis MR-1_ to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the $\beta$ diversity and relative abundance between replicates. 
 
 Diagram of measurement process \@ref(fig:fishbone).  
 ```{r fishbone, echo=FALSE, fig.cap="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process."}
@@ -109,7 +109,7 @@ Using a mock community of 68 organisms @Amore2016 showed that increasing the num
 
 @Albertsen2015 evaluated the amount of template and cycle number but only observed "small changes". Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.  
 
-@Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\B$ diversity.   
+@Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\beta$ diversity.   
 
 #### sequence copy abundance  
 
@@ -138,7 +138,7 @@ Barcoded 16S PCR primers were used in the study therefore the impact of barcodes
 
 * Sequencing platform  
   * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM.  
-    * Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
+        * Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
 * Read length    
 * Sequencing chemistry    
 

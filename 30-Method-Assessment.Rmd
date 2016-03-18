@@ -26,7 +26,7 @@ Method steps
 Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. http://doi.org/10.1371/journal.pcbi.1000844
 
 * Multiple Org  
-  * @Schirmer2015 using a mock community of 59 strains (49 bacteria and 10 archaea) evaluated differnt sequence processing methods and parameters for read filtering and quality trimming, merging paired end reads, and error correction. Methods were evaluated based on error rate reduction.  
+    * @Schirmer2015 using a mock community of 59 strains (49 bacteria and 10 archaea) evaluated differnt sequence processing methods and parameters for read filtering and quality trimming, merging paired end reads, and error correction. Methods were evaluated based on error rate reduction.  
 
 Albanese, D., Fontana, P., De Filippo, C., Cavalieri, D., & Donati, C. (2015). MICCA: a complete and accurate software for taxonomic profiling of metagenomic data. Scientific Reports, 5, 9743. http://doi.org/10.1038/srep09743  
 * Evaluates preprocessing % read passing filtering, chimeras, and redundant OTUs, relative abundance  
