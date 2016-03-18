@@ -43,9 +43,13 @@ if (packageVersion('DT') < '0.1.45') devtools::install_github('rstudio/DT')
           * @Albertsen2015 16S, metagenomics, metatranscriptomics, and FISH  
 
 ## Key references
+
 ### Measurement Process
-* @Goodrich2014
+
+* @Goodrich2014  
+
 ### Sample Processing and Sequencing  
+
 * @Brooks2015  
 * @Amore2016  
 

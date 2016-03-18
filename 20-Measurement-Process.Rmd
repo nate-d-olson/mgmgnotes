@@ -2,7 +2,9 @@
 Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues. 
 See @Goodrich2014 for a review of 16S rRNA marker gene metagenomics measurement process and general recomendations for conducting a microbiome study.  
 
-Diagram of measurement process \@ref(fig:fishbone) .  
+@Zhou2011 Used biological and technical replicates with a _Shewanella oneidenis MR-1_ to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the $B$ diversity and relative abundance between replicates. 
+
+Diagram of measurement process \@ref(fig:fishbone).  
 ```{r fishbone, echo=FALSE, fig.cap="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process."}
 library(qcc)
 cause.and.effect(
@@ -49,75 +51,103 @@ The part consists of five main steps:
 1. Library Prep   
 1. Sequencing  
 
-* @Zhou2011 Used biological and technical replicates with a _Shewanella oneidenis MR-1_ to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the $\Beta$ diversity and relative abundance between replicates.  
 
-### Sample Collection
-* Collection of sample that is representative of population being studied.  
-  * Kitty Biome study as an example of sample heterogeneity.  
-* Impact of sample storage.  
-  * Fecal storage study.  
-  * Old coral study?  
+### Sample Collection  
+
+- Collection of sample that is representative of population being studied  
+    - Kitty Biome study as an example of sample heterogeneity  
+- Impact of sample storage   
+    - Fecal storage study    
+    - Old coral study?  
 
 ### Sample Processing
-* DNA extraction  
-  * Cell type specific extraction biases  
-  * DNA concentration requirements for library prep  
-  * Issues with low concentration samples - skin microbiome  
-  * Extra cellular DNA
-    * @Albertsen evalauted the impact of different DNA extraction methods for activated slude communities.  Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.
-* Additional DNA purification to remove PCR inhibitors.  
-  * Old PCR inhibitor paper.  
-  * Any studies showing inhibitors inducing biases in metagenomic studies?  
-    * Potentially sample specific biases but do not know of any within sample biases  
 
-### 16S rRNA PCR
-* Template concentration  
-  * This is related to low concentration samples or samples with poor DNA extraction efficiencies.
-  * @Kennedy2014 showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility. 
-  * @Amore2016 increasing the template concentration from 1 ng to 10 ng for MiSeq lead to higher percentages of chimeric reads 0.08 compared to 0.2% (p = 0.20).  
-* Target variable region  
-  * @Clooney2016 Compared sequencing data between platforms and variable regions. Based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the V12 and V45 primer regions, PGM sequencing data was less impacted than MiSeq to different variable regions.  
-  * @Kozich2013 compared the results for three different variable regions sequenced using the MiSeq platform. The three regions, V34, V4, and V45 represented different length (250 bp, 430 bp, and 375 bp) though overlapping target regions. The observed error rate varied between run as well as variable regions resulting in differences in predicted OTUs. V45 had the highest predicted OTUs for all samples and replicate sequencing runs, followed by V34 and V4. The number of observed OTUs was higher for all datasets than expected for the mock community datasets.  
-* PCR primers (optional barcoded primers) 
-  * @Albertsen performed both an _in silico_ and _in vitro_ comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets.  The author's concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system. 
+#### DNA extraction 
+
+Considerations:  
+
+* Cell type specific extraction biases   
+* DNA concentration requirements for library prep   
+    * Issues with low concentration samples - skin microbiome   
+* Extra cellular DNA
+* PCR inhibitiors   
+    * Old PCR inhibitor paper.   
+    * Any studies showing inhibitors inducing biases in metagenomic studies?    
+        * Potentially sample specific biases but do not know of any within sample biases  
+
+@Albertsen2015 evalauted the impact of different DNA extraction methods for activated slude communities.  Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.  
+
+
+### 16S rRNA PCR  
+
+#### Template concentration  
+
+* This is related to low concentration samples or samples with poor DNA extraction efficiencies.   
+
+@Kennedy2014 showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility.    
+
+@Amore2016 increasing the template concentration from 1 ng to 10 ng for MiSeq lead to higher percentages of chimeric reads 0.08 compared to 0.2% (p = 0.20).   
+
+#### Target variable region    
+@Clooney2016 Compared sequencing data between platforms and variable regions. Based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the V12 and V45 primer regions, PGM sequencing data was less impacted than MiSeq to different variable regions.   
+
+@Kozich2013 compared the results for three different variable regions sequenced using the MiSeq platform. The three regions, V34, V4, and V45 represented different length (250 bp, 430 bp, and 375 bp) though overlapping target regions. The observed error rate varied between run as well as variable regions resulting in differences in predicted OTUs. V45 had the highest predicted OTUs for all samples and replicate sequencing runs, followed by V34 and V4. The number of observed OTUs was higher for all datasets than expected for the mock community datasets.   
+
+#### PCR primers (optional barcoded primers)  
+
+@Albertsen2015 performed both an _in silico_ and _in vitro_ comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets. The author's concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system.   
   
-* PCR reagents  
-  * Polymerase - high fidelity  
-  * Reagent contaminats  
-* PCR cycling conditions  
-  * number of cycles
-    * Using a mock community of 68 organisms @Amore2016 showed that increasing the number of PCR cycles resulted in increased sequencing error rates (0.58% vs. 0.64% p = 0.11) and chimeras (15 cycles 0.00% and 25 cycles 0.66%, p = 0.0245).  
-  * @Albertsen evaluated the amount of template and cycle number but only observed "small changes". Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.  
-  * @Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\Beta$ diversity.   
-  * sequence copy abundance  
-  * chimeras  
+#### PCR reagents  
+
+* Polymerase - high fidelity  
+* Reagent contaminats  
+
+#### PCR cycling conditions    
+#### number of cycles  
+
+Using a mock community of 68 organisms @Amore2016 showed that increasing the number of PCR cycles resulted in increased sequencing error rates (0.58% vs. 0.64% p = 0.11) and chimeras (15 cycles 0.00% and 25 cycles 0.66%, p = 0.0245).  
+
+@Albertsen2015 evaluated the amount of template and cycle number but only observed "small changes". Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.  
+
+@Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\B$ diversity.   
+
+#### sequence copy abundance  
+
+####chimeras  
 
 ### Library Preparation  
+
 @Kennedy2014 found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. 
-Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.  
+Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.   
 
 @Schirmer2015 sequenced a mock community of 59 different strains to evaluate the sequencing error rate for different sample processing methods. Though only fully characterizing a subset of a the results.  
 
-* Barcode/ indexing (optional)  
-  * Do not know of any barcode specific biases
-* Normalization and Pooling  
-  * Methods
+#### Barcode/ indexing (optional)  
+
+* Do not know of any barcode specific biases  
+
+#### Normalization and Pooling  
+
+* Methods  
     * DNA quantification  
-    * Bead based assays
-  * Associated Biases  
+    * Bead based assays  
+* Associated Biases   
     * Uneven sequencing depth - impact of coverage  
 
 ### Sequencing  
+
 * Sequencing platform  
   * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM.  
     * Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
-* Read length  
-* Sequencing chemistry  
+* Read length    
+* Sequencing chemistry    
 
-## Seq to OTU  
+## Seq to OTU 
+
 Convering raw sequence data to a OTU table with taxonomic annotations for use in downstream applications.
 
 ### quality filter/ read trimming  
+
 * Filtering low quality reads - short reads with high error rates.  
 * Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.
 * Merging paired ends
@@ -126,53 +156,58 @@ Convering raw sequence data to a OTU table with taxonomic annotations for use in
   - detection and removal of chimeric reads, artifact of the PCR amplification process.  
 
 ### OTU Assignment  
+
 OTU assignment most commonly by clustering is used to reduce the number of spurious observations, sequences are grouped into OTUs.  
 
 * Different approaches to clustering  
     + distance based clustering - most commonly used  
-      * Distance based clustering is a NP hard problem (i.e. computationaly intense), therefore a number of heuristics are used to make the method computationally tractable for large datasets.
-      * Threshold are used to define the similarity of sequences within a cluster, 99% and 97% are commonly used. 
-        - Some biological and sequencing error basis for threshold values, (e.g. 99% species level, 97% genus level, 1% error rate). Taxonomic variability in 16S rRNA sequence diversity (Pai?) and sequencing error [@Huse2010, @Schirmer2015, @Amore2016] challenges the validity of these values.
-      * Different distance based thresholds.
-        - average linkage  
-        - single linkage  
-        - complete linkage  
+        * Distance based clustering is a NP hard problem (i.e. computationaly intense), therefore a number of heuristics are used to make the method computationally tractable for large datasets.
+        * Threshold are used to define the similarity of sequences within a cluster, 99% and 97% are commonly used. 
+            - Some biological and sequencing error basis for threshold values, (e.g. 99% species level, 97% genus level, 1% error rate). Taxonomic variability in 16S rRNA sequence diversity (Pai?) and sequencing error [@Huse2010, @Schirmer2015, @Amore2016] challenges the validity of these values.
+        * Different distance based thresholds.
+            - average linkage  
+            - single linkage  
+            - complete linkage  
     + Other clustering/ OTU assignment methods include:
-      * distribution based  
-      * oligotyping  
-      * tree based clustering [@Wu2013]
+        * distribution based  
+        * oligotyping  
+        * tree based clustering [@Wu2013]
     + De novo vs Reference based clustering
-      * Sequences can be clustered with a set of reference cluster centers or without (_de novo_).  
+        * Sequences can be clustered with a set of reference cluster centers or without (_de novo_).  
 
 ### Taxonomic Assignment
+
 Assign clusters a taxonomic name
 * @Claesson2010 _in silico_ analysis of the taxonomic resolution for different variable regions and read lengths (454 and MISeq 150, 100, 75, and 50 bp paired end reads) and primers.
 
 ## Downstream analysis  
 ### Differential Abundance  
+
 * Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control. 
-*@Jonsson2016 Simulation based approach to evaluating differential abundance methods.  __NEED TO REVIEW__
+* @Jonsson2016 Simulation based approach to evaluating differential abundance methods.  __NEED TO REVIEW__
 
 ### Alpha Diversity  
+
 * Measure of biological or ecological diversity within a sample.  
 * Alpha diversity as a continuum related to the metric dependence on richness and evenness [@Chao2014]
 * Four primary categories richness, evenness, abundance weighted, and dissimilarity [@Ricotta2007]
-  * Richness
-    * Hill numbers, rarefaction, and richness estimation [@Chao2014]
-  * Evenness
-    * Criteria for evaluating evenness metrics [@Tuomisto2012]
-    * See @Tuomisto2012 Table 1 for summary of evenness metric including interpretation
-  * Abundance weighted
-  * Dissimilarity
+    * Richness
+        * Hill numbers, rarefaction, and richness estimation [@Chao2014]
+    * Evenness
+        * Criteria for evaluating evenness metrics [@Tuomisto2012]
+        * See @Tuomisto2012 Table 1 for summary of evenness metric including interpretation
+    * Abundance weighted
+    * Dissimilarity
 * Parametric vs. Non-parametric diversity metrics for 16S rRNA sequence analysis [@Bunge2014]
 * Development of alpha diversity richness metric for microbial diversity.  
-  * Chao1 a traditional diversity metric estimates total diversity using the number of singletons, OTUs representing only a single sequence.  
-    * Issue with singleton based diversity metrics for microbial diversity is that for incresed sequencing depth the number of singletons with continue to increase due to sequencing errors, leading to artifically inflated diversity estimates. 
-  * @Chiu2015 developed a modified version of the Chao1 estimator that is more robust to singletons bue to sequencing errors. 
-  * This method estimates diversity based on the number of doubletons to tentons.  
-  * Incorporates Hill numbers as well.  
+    * Chao1 a traditional diversity metric estimates total diversity using the number of singletons, OTUs representing only a single sequence.  
+        * Issue with singleton based diversity metrics for microbial diversity is that for incresed sequencing depth the number of singletons with continue to increase due to sequencing errors, leading to artifically inflated diversity estimates. 
+    * @Chiu2015 developed a modified version of the Chao1 estimator that is more robust to singletons bue to sequencing errors. 
+    * This method estimates diversity based on the number of doubletons to tentons.  
+    * Incorporates Hill numbers as well.  
 
 ### Beta Diversity  
 
 ## Step-by-Step protocols  
-* @Albertsen Activated Sludge http://www.midasfieldguide.org/
+
+* @Albertsen2015 Activated Sludge http://www.midasfieldguide.org/

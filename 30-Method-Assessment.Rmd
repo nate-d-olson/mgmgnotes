@@ -1,4 +1,4 @@
-## 16S rRNA Analysis Method Assessment
+# 16S rRNA Analysis Method Assessment
 Method steps  
 1. Sample to Seq
 1. Seq to OTU  
@@ -16,11 +16,11 @@ Method steps
     - Standard additions  
     - Dilution to extinction?  
 * Experimental design  
-  * @Brooks2015 generated 80 mock communities using different combinations of 7 bacterial strains generating mixtures of cells, DNA, and PCR products to characterize the contributions of different steps in the measurment process. Evalualted the results using the mixture effect model.
+  * @Brooks2015 generated 80 mock communities using different combinations of 7 bacterial strains generating mixtures of cells, DNA, and PCR products to characterize the contributions of different steps in the measurment process. Evalualted the results using the mixture effect model.  
 
 ## Seq to OTU  
 ### Pre-processing  
-* Single org samples
+* Single org samples  
   * Data sets from sequencing individual organisms using a standard 16S metagenomic pipeline had been used to evaluate sequencing errors and optimize filtering parameters.  
     * @Kunin2010 evaluated the sequencing error rates and use of different filtering thresholds for 454 pyrosequencing of an _E. coli_ isolated.  
 Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. http://doi.org/10.1371/journal.pcbi.1000844
@@ -52,7 +52,7 @@ Beblur - https://github.com/ekopylova/deblur
 
 * @Kopylova2014 used a combination of simulated, mock communities, and data from environmental samples to compare clustering methods.  
     - They evaluated the performance of the clustering methods using F-measure and phylogenetic distance.  
-    - For environment datasets the clustering methods were evaluated based on the disimilarity of samples for a dataset based on the sum of the squared deviation for UniFrac PCoA (Procrustes M^2) and similarity to UCLUST (Pearson's correlation). __NOTE__ Still note sure what they are evaluating for Procrustes.  
+    - For environment datasets the clustering methods were evaluated based on the disimilarity of samples for a dataset based on the sum of the squared deviation for UniFrac PCoA (Procrustes M^2^) and similarity to UCLUST (Pearson's correlation). __NOTE__ Still note sure what they are evaluating for Procrustes.  
     - The authors excluded singletons from there analysis, while this does help to eliminate spurious OTUs, the method may also exclude rare taxa.  
 * @Schloss2016 argues that using simulated and mock communities is not representative of real environmental samples. The authors additionally, argue the approach used by @Kopylova2014 to evaluating clustering methods confounds the impact of read filtering with clustering methods. 
     - The author's evaluated environmental datasets using Mathew's correlation coefficient, for a truth table (TP, TN, FP, FN) based on distance between sequences in the same and different clusters. 
