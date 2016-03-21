@@ -69,13 +69,25 @@ Considerations:
 * Cell type specific extraction biases   
 * DNA concentration requirements for library prep   
     * Issues with low concentration samples - skin microbiome   
-* Extra cellular DNA
+* Extra cellular DNA  
+    * Nucleic acids exuded from cells  
+    * Relic DNA, DNA from dead cells.  
+        * @Carini2016 used Propidium monoazide (PMA) to evaluate the impact of DNA from dead cells on 16S and ITS metagenomic diversity estimates. For both the fungal and microbial communities 40% of the DNA was from dead cells as a result a significant proportion of the oberved microbial diversity was from dead cells.  
+        * Need to take the presence of relic DNA into consideration when interpreting metagenomic results, not just characterizing the active, viable, or living cells at point of sampling, but also system history.  
+        * Sequencing rRNA instead of rDNA is also used to characterize the active component of the microbial community [@Blazewicz2013]. Though this method it's own limiations.
+        * See @Cangelosi2014 for other methods for targeting viable microbial community.
+        
 * PCR inhibitiors   
     * Old PCR inhibitor paper.   
     * Any studies showing inhibitors inducing biases in metagenomic studies?    
         * Potentially sample specific biases but do not know of any within sample biases  
 
-@Albertsen2015 evalauted the impact of different DNA extraction methods for activated slude communities.  Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.  
+* Cell type extraction biases   
+    * @Albertsen2015 evalauted the impact of different DNA extraction methods for activated slude communities.  Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.  
+    * Extraction methods vary in there ability to extract DNA from hard to lyse cells [@Olson2012], e.g. Gram positives, and reproducibiliy of the results [@Carrigg2007] [@Ettenauer2012].  
+    * No known method to correct for or quantify extraction biases.  
+    * Whole cells control materials may provide a way to correct for cell type specific extraction biases.  
+    * Limitation to comparing results from multiple studies when different extraction methods were used.  
 
 
 ### 16S rRNA PCR  
