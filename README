@@ -1,4 +1,4 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Open this repository in RStudio, then open `index.Rmd`, and click the `Knit` button to compile the book.
+[![Travis-CI Build Status](https://travis-ci.org/nate-d-olson/mgmgnotes.svg?branch=master)](https://travis-ci.org/nate-d-olson/mgmgnotes)
 
 TODO
 Section on performance metrics
