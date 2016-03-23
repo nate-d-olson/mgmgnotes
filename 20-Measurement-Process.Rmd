@@ -164,7 +164,10 @@ Barcoded 16S PCR primers were used in the study therefore the impact of barcodes
 * Studies comparing platforms  
     * @Clooney2016 compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM. Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results [@Clooney2016, figure 1].  
 
-   
+* Sequencing errors  
+    * Random errors - general error rates  
+    * Systematic sequencing errors  
+    * How systematic and random errors impact diversity studies.
 
 ## Seq to OTU 
 
@@ -207,8 +210,15 @@ Assign clusters a taxonomic name
 ## Downstream analysis  
 ### Differential Abundance  
 
-* Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control. 
-* @Jonsson2016 Simulation based approach to evaluating differential abundance methods.  __NEED TO REVIEW__
+* Differences in taxa or OTU abundance between experimental factors, e.g. treatment vs. control.  
+* Similarity to RNA-seq/ microarray differential abundance   
+* Key factors  
+    - Effect size, sample size, abundance  
+* See @Jonsson2016 for summary of different methods  
+* Overview of different methods and approaches  
+    - Statistical distributions   
+    - Normalization methods   
+    - Transformantions   
 
 ### Alpha Diversity  
 

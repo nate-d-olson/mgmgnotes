@@ -100,4 +100,12 @@ Beblur - https://github.com/ekopylova/deblur
 ## Downstream analysis  
 ### taxonomic classification  
 ### differential abundance  
+* Key parameters  
+    - sample size  
+    - effect size (fold change)  
+    - abundance (count)  
+* @Jonsson2016 evaluation of different methods for whole metagenome sequencing  
+    - Compared ROC for simulated datasets  
+    - sampled datasets and provided truth set for differentially abundant genes by replacing count values using a binomial distribution with $1/q$ where $q$ is defined as the effect size.  
+
 ### ecological diversity  
