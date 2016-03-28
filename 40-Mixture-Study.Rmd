@@ -1,2 +1,14 @@
-# Benchmarking Dataset
-* Mixture Study  
+# Mixture Study  
+## Part I - Development and Characterization of Dataset  
+* Experimental Design  
+* Summary of Sequencing Data  
+* Demonstration using dataset for benchmarking  
+    - Comparing OTU tables from multiple pipelines  
+    - Comparisong of differential abundance methods  
+
+
+## Part II Sensitivity Analysis  
+* One factor at a time analysis  
+    - Linearity of results  
+    - Variability in OTU table  
+* Development of reference pipeline  
