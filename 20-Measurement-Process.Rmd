@@ -173,14 +173,41 @@ Barcoded 16S PCR primers were used in the study therefore the impact of barcodes
 
 Convering raw sequence data to a OTU table with taxonomic annotations for use in downstream applications.
 
-### quality filter/ read trimming  
-
-* Filtering low quality reads - short reads with high error rates.  
-* Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.
+### Preprocessing 
+* Filtering and Trimming
+    - Filtering low quality reads - short reads with high error rates.  
+    - Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.  
+    - Approaches
+        + Quality Score
+            * min quality score
+                - Illumina QS2  
+            * Window average  
+        + Length  
+            * Min length  
+        + Trimming left and right ends  
+        + Barcode and primer based  
+    - Tools  
+        + Trimmomatic  
+        + Sickle  
+        + fastx  
+* Error correction  
+    - BayesHammer  
+    - DADA2  
+    - Deblur?  
 * Merging paired ends
-  - Merging forward and reverse reads into single contigs
+  - Merging forward and reverse reads into single contigs  
+      + Methods
+          * Perfect overlap - DADA2  
+          * dynamic programming - mothur  
+          * optimization - FLASH  
+          * Probabilistic??
+              - PANDAseq  
+              - PEAR?  
 * chimera detection
   - detection and removal of chimeric reads, artifact of the PCR amplification process.  
+      + ChimeraSlayer  
+      + uchime  
+      + DADA2 - bimera  
 
 ### OTU Assignment  
 

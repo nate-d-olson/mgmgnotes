@@ -20,6 +20,16 @@ Method steps
 
 ## Seq to OTU  
 ### Pre-processing  
+* Fastq Quality Assessment  
+    - fastqc  
+    - R ShortRead  
+    - R Rqc  
+    - Issues
+        + method developed for evaluating individual datasets - metagenomics large numbers of samples  
+        + read level information - how to best seperate out reads of different quality  
+            * DADA2 requires sequences all of the same length, good to be able to analyze on a per reads level  
+                - Huse 454 work showing that multiple errors present in some reads wheresas other reads had no errors  
+                - Want to be able to identify error free reads for OTU calling then use all reads for abundance estimates  
 * Single org samples  
   * Data sets from sequencing individual organisms using a standard 16S metagenomic pipeline had been used to evaluate sequencing errors and optimize filtering parameters.  
     * @Kunin2010 evaluated the sequencing error rates and use of different filtering thresholds for 454 pyrosequencing of an _E. coli_ isolated.  
