@@ -418,18 +418,77 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <ul>
 <li>Methods
 <ul>
-<li>Perfect overlap - DADA2<br />
-</li>
+<li>Perfect overlap - DADA2</li>
 <li>dynamic programming - mothur<br />
 </li>
-<li>optimization - FLASH<br />
-</li>
-<li>Probabilistic??
+<li>Probabilistic/ Optimization
 <ul>
-<li>PANDAseq<br />
+<li>FLASH<br />
 </li>
-<li>PEAR?<br />
+<li>PANDAseq <span class="citation">Masella et al. (<a href="references.html#ref-masella2012pandaseq">2012</a>)</span>
+<ul>
+<li>Uses a probabilitistic approach to generating contigs from paired-end reads
+<ul>
+<li>First finds primers in forward and reverse sequences (optional)<br />
 </li>
+<li>Determines overlap by maximizing the Probablity of the contig for overlap length greater than the user defined value.
+<ul>
+<li>Bases in Non-overlaping regions assigned probability of 1/4<br />
+</li>
+<li>Bases in overlaping regions assigned a probability based on the assigned base quality score and whether the bases agree between the forward and reverse reads.<br />
+_ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, and UPARSE</li>
+</ul></li>
+<li>Assigns base and quality score for overlap regions
+<ul>
+<li>for disagreements assigns base for higher quality score and assigns probability using a probabilistic method using the fastq quality scores</li>
+</ul></li>
+<li>Calculate contig average error - geometric mean [<span class="math inline">\(\left(\prod^n_{i=1}x_i\right)^{1/n}\)</span>]of the assigned quality scores</li>
+</ul></li>
+<li>Calculates the probability of an observed base using the assigned quality scores
+<ul>
+<li>conditional probability that the true nucleotides for the aligned paired end reads given the observed nucleotides<br />
+</li>
+<li>Assumes equal probablity for alternative (non-observed bases)<br />
+</li>
+<li>Option to use primer sequences location and removal during overlap generation</li>
+</ul></li>
+<li>Filter/ validating contigs
+<ul>
+<li>average contig quality score (removed in v2.8 due to bug)</li>
+<li>contig length<br />
+</li>
+<li>ambiguous bases<br />
+</li>
+<li>optional - known secondary structure, conserved regions, not implemented in distribution</li>
+<li>statistical methods - pear false positive test<br />
+</li>
+</ul></li>
+<li>Method evaluation
+<ul>
+<li>Simulated data - test algorithm correctness<br />
+</li>
+<li>single template amplicon PCR - check contig quality<br />
+</li>
+<li>defined fragment mixture to check assembly yields</li>
+</ul></li>
+</ul></li>
+<li>PEAR
+<ul>
+<li>Algorithm Summary
+<ul>
+<li>Optimizes assembly score for based on base quality score and mismatches</li>
+<li>See <span class="citation">J. Zhang et al. (<a href="references.html#ref-zhang2014pear">2014</a>)</span> for alignment base probability calculations<br />
+</li>
+<li>Developed Observed Expected alignment score (OES) for use in testing significance of merge</li>
+</ul></li>
+<li>Method Evaluation
+<ul>
+<li>simulated data comparison of multiple paired-end assembly methods for multiple fragment sizes and overlap</li>
+<li>Compared based on the number of merged contigs and false positive rate, also assessed computational cost<br />
+</li>
+<li>Also evaluated using single organism datasets</li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -555,6 +614,7 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <h2><span class="header-section-number">4.4</span> Step-by-Step protocols</h2>
 <ul>
 <li><span class="citation">Albertsen et al. (<a href="references.html#ref-Albertsen2015">2015</a>)</span> Activated Sludge <a href="http://www.midasfieldguide.org/" class="uri">http://www.midasfieldguide.org/</a></li>
+<li>List of tools for each step in the sequence analysis workflow <a href="http://h3abionet.org/tools-and-resources/sops/16s-rrna-diversity-analysis" class="uri">http://h3abionet.org/tools-and-resources/sops/16s-rrna-diversity-analysis</a></li>
 </ul>
 
 </div>
