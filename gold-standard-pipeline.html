@@ -8,7 +8,20 @@
   <title>Measurement Science of Metagenomics</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Measurement Science of Metagenomics">
-  <meta name="generator" content="bookdown 0.0.53 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.0.63 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Measurement Science of Metagenomics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Measurement Science of Metagenomics" />
+  
+  
+  
 
 
 
@@ -17,7 +30,6 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,6 +39,7 @@ MathJax.Hub.Config({
 <link rel="prev" href="ecological-diversity-robustness.html">
 <link rel="next" href="assessment-framework.html">
 
+<script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
@@ -82,7 +95,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="4.1.5" data-path="measurement-process-1.html"><a href="measurement-process-1.html#sequencing"><i class="fa fa-check"></i><b>4.1.5</b> Sequencing</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="measurement-process-1.html"><a href="measurement-process-1.html#seq-to-otu"><i class="fa fa-check"></i><b>4.2</b> Seq to OTU</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="measurement-process-1.html"><a href="measurement-process-1.html#quality-filter-read-trimming"><i class="fa fa-check"></i><b>4.2.1</b> quality filter/ read trimming</a></li>
+<li class="chapter" data-level="4.2.1" data-path="measurement-process-1.html"><a href="measurement-process-1.html#preprocessing"><i class="fa fa-check"></i><b>4.2.1</b> Preprocessing</a></li>
 <li class="chapter" data-level="4.2.2" data-path="measurement-process-1.html"><a href="measurement-process-1.html#otu-assignment"><i class="fa fa-check"></i><b>4.2.2</b> OTU Assignment</a></li>
 <li class="chapter" data-level="4.2.3" data-path="measurement-process-1.html"><a href="measurement-process-1.html#taxonomic-assignment"><i class="fa fa-check"></i><b>4.2.3</b> Taxonomic Assignment</a></li>
 </ul></li>
@@ -106,7 +119,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.3.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#ecological-diversity"><i class="fa fa-check"></i><b>5.3.3</b> ecological diversity</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="benchmarking-dataset.html"><a href="benchmarking-dataset.html"><i class="fa fa-check"></i><b>6</b> Benchmarking Dataset</a></li>
+<li class="chapter" data-level="6" data-path="mixture-study.html"><a href="mixture-study.html"><i class="fa fa-check"></i><b>6</b> Mixture Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="mixture-study.html"><a href="mixture-study.html#part-i---development-and-characterization-of-dataset"><i class="fa fa-check"></i><b>6.1</b> Part I - Development and Characterization of Dataset</a></li>
+<li class="chapter" data-level="6.2" data-path="mixture-study.html"><a href="mixture-study.html#part-ii-sensitivity-analysis"><i class="fa fa-check"></i><b>6.2</b> Part II Sensitivity Analysis</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html"><i class="fa fa-check"></i><b>7</b> Ecological Diversity Robustness</a><ul>
 <li class="chapter" data-level="7.1" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html#overview"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
 </ul></li>
@@ -242,7 +258,17 @@ gitbook.start({
 });
 </script>
 
-
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

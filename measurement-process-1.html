@@ -8,7 +8,20 @@
   <title>Measurement Science of Metagenomics</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Measurement Science of Metagenomics">
-  <meta name="generator" content="bookdown 0.0.53 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.0.63 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Measurement Science of Metagenomics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Measurement Science of Metagenomics" />
+  
+  
+  
 
 
 
@@ -17,7 +30,6 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,6 +39,7 @@ MathJax.Hub.Config({
 <link rel="prev" href="process-characterization.html">
 <link rel="next" href="s-rrna-analysis-method-assessment.html">
 
+<script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
@@ -82,7 +95,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="4.1.5" data-path="measurement-process-1.html"><a href="measurement-process-1.html#sequencing"><i class="fa fa-check"></i><b>4.1.5</b> Sequencing</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="measurement-process-1.html"><a href="measurement-process-1.html#seq-to-otu"><i class="fa fa-check"></i><b>4.2</b> Seq to OTU</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="measurement-process-1.html"><a href="measurement-process-1.html#quality-filter-read-trimming"><i class="fa fa-check"></i><b>4.2.1</b> quality filter/ read trimming</a></li>
+<li class="chapter" data-level="4.2.1" data-path="measurement-process-1.html"><a href="measurement-process-1.html#preprocessing"><i class="fa fa-check"></i><b>4.2.1</b> Preprocessing</a></li>
 <li class="chapter" data-level="4.2.2" data-path="measurement-process-1.html"><a href="measurement-process-1.html#otu-assignment"><i class="fa fa-check"></i><b>4.2.2</b> OTU Assignment</a></li>
 <li class="chapter" data-level="4.2.3" data-path="measurement-process-1.html"><a href="measurement-process-1.html#taxonomic-assignment"><i class="fa fa-check"></i><b>4.2.3</b> Taxonomic Assignment</a></li>
 </ul></li>
@@ -106,7 +119,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.3.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#ecological-diversity"><i class="fa fa-check"></i><b>5.3.3</b> ecological diversity</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="benchmarking-dataset.html"><a href="benchmarking-dataset.html"><i class="fa fa-check"></i><b>6</b> Benchmarking Dataset</a></li>
+<li class="chapter" data-level="6" data-path="mixture-study.html"><a href="mixture-study.html"><i class="fa fa-check"></i><b>6</b> Mixture Study</a><ul>
+<li class="chapter" data-level="6.1" data-path="mixture-study.html"><a href="mixture-study.html#part-i---development-and-characterization-of-dataset"><i class="fa fa-check"></i><b>6.1</b> Part I - Development and Characterization of Dataset</a></li>
+<li class="chapter" data-level="6.2" data-path="mixture-study.html"><a href="mixture-study.html#part-ii-sensitivity-analysis"><i class="fa fa-check"></i><b>6.2</b> Part II Sensitivity Analysis</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html"><i class="fa fa-check"></i><b>7</b> Ecological Diversity Robustness</a><ul>
 <li class="chapter" data-level="7.1" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html#overview"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
 </ul></li>
@@ -347,16 +363,85 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <div id="seq-to-otu" class="section level2">
 <h2><span class="header-section-number">4.2</span> Seq to OTU</h2>
 <p>Convering raw sequence data to a OTU table with taxonomic annotations for use in downstream applications.</p>
-<div id="quality-filter-read-trimming" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> quality filter/ read trimming</h3>
+<div id="preprocessing" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Preprocessing</h3>
+<ul>
+<li>Filtering and Trimming
 <ul>
 <li>Filtering low quality reads - short reads with high error rates.<br />
 </li>
-<li>Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.</li>
+<li>Trimming reads - removing ends of reads based on base quality score as well as removal of adapter sequences that were added during sample processing.<br />
+</li>
+<li>Approaches
+<ul>
+<li>Quality Score
+<ul>
+<li>min quality score
+<ul>
+<li>Illumina QS2<br />
+</li>
+</ul></li>
+<li>Window average<br />
+</li>
+</ul></li>
+<li>Length
+<ul>
+<li>Min length<br />
+</li>
+</ul></li>
+<li>Trimming left and right ends<br />
+</li>
+<li>Barcode and primer based<br />
+</li>
+</ul></li>
+<li>Tools
+<ul>
+<li>Trimmomatic<br />
+</li>
+<li>Sickle<br />
+</li>
+<li>fastx<br />
+</li>
+</ul></li>
+</ul></li>
+<li>Error correction
+<ul>
+<li>BayesHammer<br />
+</li>
+<li>DADA2<br />
+</li>
+<li>Deblur?<br />
+</li>
+</ul></li>
 <li>Merging paired ends</li>
-<li>Merging forward and reverse reads into single contigs</li>
+<li>Merging forward and reverse reads into single contigs
+<ul>
+<li>Methods
+<ul>
+<li>Perfect overlap - DADA2<br />
+</li>
+<li>dynamic programming - mothur<br />
+</li>
+<li>optimization - FLASH<br />
+</li>
+<li>Probabilistic??
+<ul>
+<li>PANDAseq<br />
+</li>
+<li>PEAR?<br />
+</li>
+</ul></li>
+</ul></li>
+</ul></li>
 <li>chimera detection</li>
-<li>detection and removal of chimeric reads, artifact of the PCR amplification process.</li>
+<li>detection and removal of chimeric reads, artifact of the PCR amplification process.
+<ul>
+<li>ChimeraSlayer<br />
+</li>
+<li>uchime<br />
+</li>
+<li>DADA2 - bimera</li>
+</ul></li>
 </ul>
 </div>
 <div id="otu-assignment" class="section level3">
@@ -521,7 +606,17 @@ gitbook.start({
 });
 </script>
 
-
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
