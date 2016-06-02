@@ -8,7 +8,7 @@
   <title>Measurement Science of Metagenomics</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Measurement Science of Metagenomics">
-  <meta name="generator" content="bookdown 0.0.63 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
 
   <meta property="og:title" content="Measurement Science of Metagenomics" />
   <meta property="og:type" content="book" />
@@ -176,7 +176,7 @@ MathJax.Hub.Config({
 </ul></li>
 <li>Experimental design<br />
 </li>
-<li><span class="citation">Brooks et al. (<a href="references.html#ref-Brooks2015">2015</a>)</span> generated 80 mock communities using different combinations of 7 bacterial strains generating mixtures of cells, DNA, and PCR products to characterize the contributions of different steps in the measurment process. Evalualted the results using the mixture effect model.</li>
+<li><span class="citation">Brooks et al. (<a href="#ref-Brooks2015">2015</a>)</span> generated 80 mock communities using different combinations of 7 bacterial strains generating mixtures of cells, DNA, and PCR products to characterize the contributions of different steps in the measurment process. Evalualted the results using the mixture effect model.</li>
 </ul>
 </div>
 <div id="seq-to-otu-1" class="section level2">
@@ -212,12 +212,12 @@ MathJax.Hub.Config({
 </li>
 <li>Data sets from sequencing individual organisms using a standard 16S metagenomic pipeline had been used to evaluate sequencing errors and optimize filtering parameters.
 <ul>
-<li><span class="citation">Kunin et al. (<a href="references.html#ref-Kunin2010">2010</a>)</span> evaluated the sequencing error rates and use of different filtering thresholds for 454 pyrosequencing of an <em>E. coli</em> isolated.<br />
+<li><span class="citation">Kunin et al. (<a href="#ref-Kunin2010">2010</a>)</span> evaluated the sequencing error rates and use of different filtering thresholds for 454 pyrosequencing of an <em>E. coli</em> isolated.<br />
 Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Method, Sequence Filtering, and Region on the Analysis of 16S rRNA Gene-Based Studies. PLoS Comput Biol, 6(7), e1000844. <a href="http://doi.org/10.1371/journal.pcbi.1000844" class="uri">http://doi.org/10.1371/journal.pcbi.1000844</a></li>
 </ul></li>
 <li>Multiple Org
 <ul>
-<li><span class="citation">Schirmer et al. (<a href="references.html#ref-Schirmer2015">2015</a>)</span> using a mock community of 59 strains (49 bacteria and 10 archaea) evaluated differnt sequence processing methods and parameters for read filtering and quality trimming, merging paired end reads, and error correction. Methods were evaluated based on error rate reduction.</li>
+<li><span class="citation">Schirmer et al. (<a href="#ref-Schirmer2015">2015</a>)</span> using a mock community of 59 strains (49 bacteria and 10 archaea) evaluated differnt sequence processing methods and parameters for read filtering and quality trimming, merging paired end reads, and error correction. Methods were evaluated based on error rate reduction.</li>
 </ul></li>
 </ul>
 <p>Albanese, D., Fontana, P., De Filippo, C., Cavalieri, D., &amp; Donati, C. (2015). MICCA: a complete and accurate software for taxonomic profiling of metagenomic data. Scientific Reports, 5, 9743. <a href="http://doi.org/10.1038/srep09743" class="uri">http://doi.org/10.1038/srep09743</a><br />
@@ -233,7 +233,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <div id="otu-assignment-1" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> OTU Assignment</h3>
 <ul>
-<li>De novo clustering has been shown to be more accurate <span class="citation">(S. L. Westcott and Schloss <a href="references.html#ref-Westcott2015">2015</a>)</span><br />
+<li>De novo clustering has been shown to be more accurate <span class="citation">(S. L. Westcott and Schloss <a href="#ref-Westcott2015">2015</a>)</span><br />
 </li>
 <li>Types of datasets used to assess benchmarking methods: simulated data, mock communities, environmental datasests</li>
 <li>Approaches to evaluating clustering methods
@@ -251,7 +251,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <div id="summary-of-cluster-method-assessment-papers" class="section level4">
 <h4><span class="header-section-number">5.2.3.1</span> Summary of Cluster Method Assessment Papers</h4>
 <ul>
-<li><span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span> used a combination of simulated, mock communities, and data from environmental samples to compare clustering methods.
+<li><span class="citation">Kopylova et al. (<a href="#ref-Kopylova2014">2014</a>)</span> used a combination of simulated, mock communities, and data from environmental samples to compare clustering methods.
 <ul>
 <li>They evaluated the performance of the clustering methods using F-measure and phylogenetic distance.<br />
 </li>
@@ -260,22 +260,22 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <li>The authors excluded singletons from there analysis, while this does help to eliminate spurious OTUs, the method may also exclude rare taxa.<br />
 </li>
 </ul></li>
-<li><span class="citation">Schloss (<a href="references.html#ref-Schloss2016">2016</a>)</span> argues that using simulated and mock communities is not representative of real environmental samples. The authors additionally, argue the approach used by <span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span> to evaluating clustering methods confounds the impact of read filtering with clustering methods.
+<li><span class="citation">Schloss (<a href="#ref-Schloss2016">2016</a>)</span> argues that using simulated and mock communities is not representative of real environmental samples. The authors additionally, argue the approach used by <span class="citation">Kopylova et al. (<a href="#ref-Kopylova2014">2014</a>)</span> to evaluating clustering methods confounds the impact of read filtering with clustering methods.
 <ul>
 <li>The author’s evaluated environmental datasets using Mathew’s correlation coefficient, for a truth table (TP, TN, FP, FN) based on distance between sequences in the same and different clusters.
 <ul>
-<li>This method for evaluating clusters was first used in <span class="citation">(Schloss and Westcott <a href="references.html#ref-Schloss2011">2011</a>)</span><br />
+<li>This method for evaluating clusters was first used in <span class="citation">(Schloss and Westcott <a href="#ref-Schloss2011">2011</a>)</span><br />
 </li>
 </ul></li>
 <li>Average neighbor performed the best based the MCC based assessment. However, this approach to evaluation is biased towards this method as the results are strictly assessed based on the sequence distance criteria. Other clustering methods that attempt to address more nuianced issues with clustering, sequencing error and variability in sequence diversity allow for differences in distances within and between clusters.<br />
 </li>
 <li>This approach to cluster evaluation is particularly suited for algorithms based on analytical proofs.</li>
-<li>For example the DNACluster clustering algorithm employs a heuristic based on a proof that for any given cluster the distance between two sequences in the cluster is less than the defined threshold value and no sequence is closer to another cluster center than the center of the cluster it is assigned to <span class="citation">(Ghodsi, Liu, and Pop <a href="references.html#ref-Ghodsi2011">2011</a>)</span>.
+<li>For example the DNACluster clustering algorithm employs a heuristic based on a proof that for any given cluster the distance between two sequences in the cluster is less than the defined threshold value and no sequence is closer to another cluster center than the center of the cluster it is assigned to <span class="citation">(Ghodsi, Liu, and Pop <a href="#ref-Ghodsi2011">2011</a>)</span>.
 <ul>
-<li><span class="citation">Ghodsi, Liu, and Pop (<a href="references.html#ref-Ghodsi2011">2011</a>)</span> used a similar approach to validate their clustering method, though only focusing on the within cluster pairwise distance.</li>
+<li><span class="citation">Ghodsi, Liu, and Pop (<a href="#ref-Ghodsi2011">2011</a>)</span> used a similar approach to validate their clustering method, though only focusing on the within cluster pairwise distance.</li>
 </ul></li>
 </ul></li>
-<li>Cluster Robustness is another attribute for evaluating clustering methods <span class="citation">(Y. He et al. <a href="references.html#ref-He2015">2015</a>)</span>.
+<li>Cluster Robustness is another attribute for evaluating clustering methods <span class="citation">(Y. He et al. <a href="#ref-He2015">2015</a>)</span>.
 <ul>
 <li>Cluster robustness is the reproduciblity of the OTU table generated by a clustering algorith.<br />
 </li>
@@ -306,7 +306,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 </ul></li>
 <li>The resulting OTU table is dependent the number of sequences clustered.<br />
 </li>
-<li>For some methods the OTU table is dependent on the order in which the sequences are provided <span class="citation">(Ghodsi, Liu, and Pop <a href="references.html#ref-Ghodsi2011">2011</a>)</span>.<br />
+<li>For some methods the OTU table is dependent on the order in which the sequences are provided <span class="citation">(Ghodsi, Liu, and Pop <a href="#ref-Ghodsi2011">2011</a>)</span>.<br />
 </li>
 <li>Closed reference clustering was the only method the produced stable clusters.<br />
 </li>
@@ -315,9 +315,9 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <li>Open-reference cluster, which performs <em>de novo</em> clustering of unmatched sequences provides a more robust alternative clustering method to <em>de novo</em> clustering while allowing for the diversity of novel OTUs.<br />
 </li>
 </ul></li>
-<li>Cluster method robustness can also be calculated using cross validation<span class="citation">(W. Chen et al. <a href="references.html#ref-Chen2013">2013</a>)</span>.
+<li>Cluster method robustness can also be calculated using cross validation<span class="citation">(W. Chen et al. <a href="#ref-Chen2013">2013</a>)</span>.
 <ul>
-<li><span class="citation">W. Chen et al. (<a href="references.html#ref-Chen2013">2013</a>)</span> subsampled the data to 90% five times and compared the clusters between replicates.<br />
+<li><span class="citation">W. Chen et al. (<a href="#ref-Chen2013">2013</a>)</span> subsampled the data to 90% five times and compared the clusters between replicates.<br />
 </li>
 <li>Methods were evaluated using precision, recall, and NID
 <ul>
@@ -331,7 +331,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <li>See assessment of cluster quality for metric definitions<br />
 </li>
 </ul></li>
-<li>Cluster robustness can also be evaluated based on threshold and 16S region <span class="citation">(Schmidt, Matias Rodrigues, and Mering <a href="references.html#ref-Schmidt2015">2015</a>)</span>.
+<li>Cluster robustness can also be evaluated based on threshold and 16S region <span class="citation">(Schmidt, Matias Rodrigues, and Mering <a href="#ref-Schmidt2015">2015</a>)</span>.
 <ul>
 <li>The authors focus their assessment more on the comparability of results among different methods and note the importances of reproducibility.<br />
 </li>
@@ -340,7 +340,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 </ul></li>
 <li>Cluster method assessment based on OTU inflation.
 <ul>
-<li>Clustering methods have also been evaluated based on the number of predicted OTUs relative to the number of expected OTUs <span class="citation">(Huse et al. <a href="references.html#ref-Huse2010">2010</a>, <span class="citation">Kopylova et al. (<a href="references.html#ref-Kopylova2014">2014</a>)</span>)</span>.<br />
+<li>Clustering methods have also been evaluated based on the number of predicted OTUs relative to the number of expected OTUs <span class="citation">(Huse et al. <a href="#ref-Huse2010">2010</a>, <span class="citation">Kopylova et al. (<a href="#ref-Kopylova2014">2014</a>)</span>)</span>.<br />
 </li>
 <li>Here either simulated or data from a mock community, where the number of OTUs is based on the number of strains or genomes used to generate the assessment dataset.<br />
 </li>
@@ -367,7 +367,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <li>abundance (count)<br />
 </li>
 </ul></li>
-<li><span class="citation">Jonsson et al. (<a href="references.html#ref-Jonsson2016">2016</a>)</span> evaluation of different methods for whole metagenome sequencing
+<li><span class="citation">Jonsson et al. (<a href="#ref-Jonsson2016">2016</a>)</span> evaluation of different methods for whole metagenome sequencing
 <ul>
 <li>Compared ROC for simulated datasets<br />
 </li>
@@ -381,6 +381,48 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 </div>
 </div>
 </div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-Brooks2015">
+<p>Brooks, J Paul, David J Edwards, Michael D Harwich, Maria C Rivera, Jennifer M Fettweis, Myrna G Serrano, Robert A Reris, et al. 2015. “The truth about metagenomics: quantifying and counteracting bias in 16S rRNA studies.” <em>BMC Microbiology</em> 15 (1): 66. doi:<a href="https://doi.org/10.1186/s12866-015-0351-6">10.1186/s12866-015-0351-6</a>.</p>
+</div>
+<div id="ref-Kunin2010">
+<p>Kunin, Victor, Anna Engelbrektson, Howard Ochman, and Philip Hugenholtz. 2010. “Wrinkles in the rare biosphere: pyrosequencing errors can lead to artificial inflation of diversity estimates.” <em>Environmental Microbiology</em> 12 (1): 118–23. doi:<a href="https://doi.org/10.1111/j.1462-2920.2009.02051.x">10.1111/j.1462-2920.2009.02051.x</a>.</p>
+</div>
+<div id="ref-Schirmer2015">
+<p>Schirmer, Melanie, Umer Z. Ijaz, Rosalinda D’Amore, Neil Hall, William T. Sloan, and Christopher Quince. 2015. “Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform.” <em>Nucleic Acids Research</em> 43 (6). doi:<a href="https://doi.org/10.1093/nar/gku1341">10.1093/nar/gku1341</a>.</p>
+</div>
+<div id="ref-Westcott2015">
+<p>Westcott, Sarah L, and Patrick D Schloss. 2015. “De novo clustering methods out-perform reference-based methods for assigning 16S rRNA gene sequences to operational taxonomic units.” <em>PeerJ</em> 3: e1487. doi:<a href="https://doi.org/10.7287/peerj.preprints.1466v1">10.7287/peerj.preprints.1466v1</a>.</p>
+</div>
+<div id="ref-Kopylova2014">
+<p>Kopylova, Evguenia, Jose A Navas-molina, Céline Mercier, and Zech Xu. 2014. “Open-Source Sequence Clustering Methods Improve the State Of the Art.” <em>MSystems</em> 1 (1): 1–16. doi:<a href="https://doi.org/10.1128/mSystems.00003-15.Editor">10.1128/mSystems.00003-15.Editor</a>.</p>
+</div>
+<div id="ref-Schloss2016">
+<p>Schloss, Patrick D. 2016. “Application of database-independent approach to assess the quality of OTU picking methods.”</p>
+</div>
+<div id="ref-Schloss2011">
+<p>Schloss, Patrick D., and Sarah L. Westcott. 2011. “Assessing and Improving Methods Used in Operational Taxonomic Unit-Based Approaches for 16S rRNA Gene Sequence Analysis.” <em>Applied and Environmental Microbiology</em> 77 (10): 3219–26. doi:<a href="https://doi.org/10.1128/AEM.02810-10">10.1128/AEM.02810-10</a>.</p>
+</div>
+<div id="ref-Ghodsi2011">
+<p>Ghodsi, Mohammadreza, Bo Liu, and Mihai Pop. 2011. “DNACLUST: accurate and efficient clustering of phylogenetic marker genes.” <em>BMC Bioinformatics</em> 12 (1). BioMed Central Ltd: 271. doi:<a href="https://doi.org/10.1186/1471-2105-12-271">10.1186/1471-2105-12-271</a>.</p>
+</div>
+<div id="ref-He2015">
+<p>He, Yan, J Gregory Caporaso, Xiao-Tao Jiang, Hua-Fang Sheng, Susan M Huse, Jai Ram Rideout, Robert C Edgar, et al. 2015. “Stability of operational taxonomic units: an important but neglected property for analyzing microbial diversity.” <em>Microbiome</em> 3 (1). ??? 20. doi:<a href="https://doi.org/10.1186/s40168-015-0081-x">10.1186/s40168-015-0081-x</a>.</p>
+</div>
+<div id="ref-Chen2013">
+<p>Chen, Wei, Clarence K. Zhang, Yongmei Cheng, Shaowu Zhang, and Hongyu Zhao. 2013. “A Comparison of Methods for Clustering 16S rRNA Sequences into OTUs.” <em>PLoS ONE</em> 8 (8). doi:<a href="https://doi.org/10.1371/journal.pone.0070837">10.1371/journal.pone.0070837</a>.</p>
+</div>
+<div id="ref-Schmidt2015">
+<p>Schmidt, Thomas S B, Jo??o F. Matias Rodrigues, and Christian von Mering. 2015. “Limits to robustness and reproducibility in the demarcation of operational taxonomic units.” <em>Environmental Microbiology</em> 17 (5): 1689–1706. doi:<a href="https://doi.org/10.1111/1462-2920.12610">10.1111/1462-2920.12610</a>.</p>
+</div>
+<div id="ref-Huse2010">
+<p>Huse, Susan M, David Mark Welch, Hilary G Morrison, and Mitchell L Sogin. 2010. “Ironing out the wrinkles in the rare biosphere through improved OTU clustering.” <em>Environmental Microbiology</em> 12 (7): 1889–98. doi:<a href="https://doi.org/10.1111/j.1462-2920.2010.02193.x">10.1111/j.1462-2920.2010.02193.x</a>.</p>
+</div>
+<div id="ref-Jonsson2016">
+<p>Jonsson, Viktor, Tobias Österlund, Olle Nerman, and Erik Kristiansson. 2016. “Statistical evaluation of methods for identification of differentially abundant genes in comparative metagenomics.” <em>BMC Genomics</em> 17 (1). BioMed Central: 78. doi:<a href="https://doi.org/10.1186/s12864-016-2386-y">10.1186/s12864-016-2386-y</a>.</p>
+</div>
+</div>
             </section>
 
           </div>
@@ -389,7 +431,7 @@ Schloss, P. D. (2010). The Effects of Alignment Quality, Distance Calculation Me
 <a href="measurement-process-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="mixture-study.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
-<script src="libs/gitbook/js/app.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
 <script src="libs/gitbook/js/lunr.js"></script>
 <script src="libs/gitbook/js/plugin-search.js"></script>
 <script src="libs/gitbook/js/plugin-sharing.js"></script>

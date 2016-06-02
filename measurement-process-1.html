@@ -8,7 +8,7 @@
   <title>Measurement Science of Metagenomics</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Measurement Science of Metagenomics">
-  <meta name="generator" content="bookdown 0.0.63 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
 
   <meta property="og:title" content="Measurement Science of Metagenomics" />
   <meta property="og:type" content="book" />
@@ -151,13 +151,13 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="measurement-process-1" class="section level1">
 <h1><span class="header-section-number">4</span> Measurement Process</h1>
-<p>Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues. See <span class="citation">Goodrich et al. (<a href="references.html#ref-Goodrich2014">2014</a>)</span> for a review of 16S rRNA marker gene metagenomics measurement process and general recomendations for conducting a microbiome study.</p>
-<p><span class="citation">J. Zhou et al. (<a href="references.html#ref-Zhou2011">2011</a>)</span> Used biological and technical replicates with a <em>Shewanella oneidenis MR-1</em> to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the <span class="math inline">\(\beta\)</span> diversity and relative abundance between replicates.</p>
+<p>Overview of the 16S rRNA marker gene metagenomics measurement process including the sources of error and bias introduced at different step in the process along with different mitigation strategies that have been developed to address each of the issues. See <span class="citation">Goodrich et al. (<a href="#ref-Goodrich2014">2014</a>)</span> for a review of 16S rRNA marker gene metagenomics measurement process and general recomendations for conducting a microbiome study.</p>
+<p><span class="citation">J. Zhou et al. (<a href="#ref-Zhou2011">2011</a>)</span> Used biological and technical replicates with a <em>Shewanella oneidenis MR-1</em> to assess the reproducibility and quanitative accuracy of 16S sequencing, using 454 pyroseuqencing and targeting the V45 region. Results demonstrated a lack of reporducibility and quantiative accuracy when comparing the <span class="math inline">\(\beta\)</span> diversity and relative abundance between replicates.</p>
 <p>Diagram of measurement process <a href="measurement-process-1.html#fig:fishbone">4.1</a>.</p>
 <pre><code>## Package &#39;qcc&#39;, version 2.6</code></pre>
 <pre><code>## Type &#39;citation(&quot;qcc&quot;)&#39; for citing this R package in publications.</code></pre>
 <div class="figure"><span id="fig:fishbone"></span>
-<img src="_main_files/figure-html/fishbone-1.png" alt="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process."  />
+<img src="_main_files/figure-html/fishbone-1.png" alt="Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process." width="672" />
 <p class="caption">
 Figure 4.1: Fishbone diagram of the 16S rRNA metagenomic sequencing measurement process.
 </p>
@@ -165,7 +165,7 @@ Figure 4.1: Fishbone diagram of the 16S rRNA metagenomic sequencing measurement 
 <p>Review of what is currently known about the sources of error and bias in the 16S metagenomics measurement process. Cause-effect diagrams are commonly used in process quality control to show the relationship between steps in the measurement process and sources of error or bias <a href="measurement-process-1.html#fig:cause-effect">4.2</a>.<br />
 Potentially may want to revise to focus on sources of error, e.g. cell type bias, preferential amplification, sequence errors, chimeras .</p>
 <div class="figure"><span id="fig:cause-effect"></span>
-<img src="_main_files/figure-html/cause-effect-1.png" alt="Causes (branch labels) of bias and variability indicated for different sources of error (branch text)."  />
+<img src="_main_files/figure-html/cause-effect-1.png" alt="Causes (branch labels) of bias and variability indicated for different sources of error (branch text)." width="672" />
 <p class="caption">
 Figure 4.2: Causes (branch labels) of bias and variability indicated for different sources of error (branch text).
 </p>
@@ -195,9 +195,16 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </ul></li>
 <li>Impact of sample storage
 <ul>
-<li><span class="citation">Flores et al. (<a href="references.html#ref-Flores2015">2015</a>)</span> evaluated impact of storage conditions on 16S metagenomics. The study results supported the use of RNALater as storage media after evaluating the different temperature, media, and duration for biological replicate stool samples. The results were evaluated using intraclass correlation coefficients as well as <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> diversity. <strong>DATA NOT PUBLICALLY AVAILABLE!!!!!</strong><br />
+<li><span class="citation">Flores et al. (<a href="#ref-Flores2015">2015</a>)</span> evaluated impact of storage conditions on 16S metagenomics. The study results supported the use of RNALater as storage media after evaluating the different temperature, media, and duration for biological replicate stool samples. The results were evaluated using intraclass correlation coefficients as well as <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> diversity. <strong>DATA NOT PUBLICALLY AVAILABLE!!!!!</strong><br />
 </li>
-<li>Old coral study?</li>
+<li>Old coral study?<br />
+</li>
+<li><span class="citation">Hill et al. (<a href="#ref-Hill2016">2016</a>)</span> evlauated the use of DNA Genotek storage vial on microbiomes for infant and elderly samples. Found OTU specific differential abundance results. Elderly samples were less impacted by storage than infant samples. Results suggest that the impact of storage conditions is organism specific.</li>
+<li><span class="citation">Lauber et al. (<a href="#ref-Lauber2011">2011</a>)</span> study evaluating the impact of storage conditions, weighted UniFrac community analysis not impacted by storage conditions, whereaas for skin communities storage conditions impacted unweighted UniFrac results.<br />
+</li>
+<li><span class="citation">G. D. Wu et al. (<a href="#ref-Wu2010">2010</a>)</span> another study evaluating the impact of storage conditions<br />
+</li>
+<li><span class="citation">Sinha et al. (<a href="#ref-Sinha2016">2016</a>)</span> compared impact of storage and sample collection methods for fecal microbiome studies as part of an interlaboratory study. Found storage methods produced similar results to samples immediately processed. Differences in results between laboratories are likely due to differences in sample processing methods (e.g. DNA extraction method, PCR primers, target region) than a laboratory effect.</li>
 </ul></li>
 </ul>
 </div>
@@ -220,12 +227,12 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </li>
 <li>Relic DNA, DNA from dead cells.
 <ul>
-<li><span class="citation">Carini et al. (<a href="references.html#ref-Carini2016">2016</a>)</span> used Propidium monoazide (PMA) to evaluate the impact of DNA from dead cells on 16S and ITS metagenomic diversity estimates. For both the fungal and microbial communities 40% of the DNA was from dead cells as a result a significant proportion of the oberved microbial diversity was from dead cells.<br />
+<li><span class="citation">Carini et al. (<a href="#ref-Carini2016">2016</a>)</span> used Propidium monoazide (PMA) to evaluate the impact of DNA from dead cells on 16S and ITS metagenomic diversity estimates. For both the fungal and microbial communities 40% of the DNA was from dead cells as a result a significant proportion of the oberved microbial diversity was from dead cells.<br />
 </li>
 <li>Need to take the presence of relic DNA into consideration when interpreting metagenomic results, not just characterizing the active, viable, or living cells at point of sampling, but also system history.<br />
 </li>
-<li>Sequencing rRNA instead of rDNA is also used to characterize the active component of the microbial community <span class="citation">(Blazewicz et al. <a href="references.html#ref-Blazewicz2013">2013</a>)</span>. Though this method it’s own limiations.</li>
-<li>See <span class="citation">Cangelosi and Meschke (<a href="references.html#ref-Cangelosi2014">2014</a>)</span> for other methods for targeting viable microbial community.</li>
+<li>Sequencing rRNA instead of rDNA is also used to characterize the active component of the microbial community <span class="citation">(Blazewicz et al. <a href="#ref-Blazewicz2013">2013</a>)</span>. Though this method it’s own limiations.</li>
+<li>See <span class="citation">Cangelosi and Meschke (<a href="#ref-Cangelosi2014">2014</a>)</span> for other methods for targeting viable microbial community.</li>
 </ul></li>
 </ul></li>
 <li>PCR inhibitiors
@@ -239,9 +246,9 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </ul></li>
 <li>Cell type extraction biases
 <ul>
-<li><span class="citation">Albertsen et al. (<a href="references.html#ref-Albertsen2015">2015</a>)</span> evalauted the impact of different DNA extraction methods for activated slude communities. Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.<br />
+<li><span class="citation">Albertsen et al. (<a href="#ref-Albertsen2015">2015</a>)</span> evalauted the impact of different DNA extraction methods for activated slude communities. Bead beating both time and intensity impacted the yield and size distribution of the extracted DNA as well as the observed abundance of different bacteria at both the phylum level and class for Proteobacteria.<br />
 </li>
-<li>Extraction methods vary in there ability to extract DNA from hard to lyse cells <span class="citation">(Olson and Morrow <a href="references.html#ref-Olson2012">2012</a>)</span>, e.g. Gram positives, and reproducibiliy of the results <span class="citation">(Carrigg et al. <a href="references.html#ref-Carrigg2007">2007</a>)</span> <span class="citation">(Ettenauer et al. <a href="references.html#ref-Ettenauer2012">2012</a>)</span>.<br />
+<li>Extraction methods vary in there ability to extract DNA from hard to lyse cells <span class="citation">(Olson and Morrow <a href="#ref-Olson2012">2012</a>)</span>, e.g. Gram positives, and reproducibiliy of the results <span class="citation">(Carrigg et al. <a href="#ref-Carrigg2007">2007</a>)</span> <span class="citation">(Ettenauer et al. <a href="#ref-Ettenauer2012">2012</a>)</span>.<br />
 </li>
 <li>No known method to correct for or quantify extraction biases.<br />
 </li>
@@ -259,24 +266,28 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <ul>
 <li>This is related to low concentration samples or samples with poor DNA extraction efficiencies.</li>
 </ul>
-<p><span class="citation">Kennedy et al. (<a href="references.html#ref-Kennedy2014">2014</a>)</span> showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility.</p>
-<p><span class="citation">D’Amore et al. (<a href="references.html#ref-Amore2016">2016</a>)</span> increasing the template concentration from 1 ng to 10 ng for MiSeq lead to higher percentages of chimeric reads 0.08 compared to 0.2% (p = 0.20).</p>
+<p><span class="citation">Kennedy et al. (<a href="#ref-Kennedy2014">2014</a>)</span> showed that the profile of replicate samples for different template concentration was more variable then when the imput concentration is the same. Pooling replicate PCR reactions decreased the within sample variablility.</p>
+<p><span class="citation">D’Amore et al. (<a href="#ref-Amore2016">2016</a>)</span> increasing the template concentration from 1 ng to 10 ng for MiSeq lead to higher percentages of chimeric reads 0.08 compared to 0.2% (p = 0.20).</p>
 </div>
 <div id="target-variable-region" class="section level4">
 <h4><span class="header-section-number">4.1.3.2</span> Target variable region</h4>
-<p><span class="citation">Clooney et al. (<a href="references.html#ref-Clooney2016">2016</a>)</span> Compared sequencing data between platforms and variable regions. Based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the V12 and V45 primer regions, PGM sequencing data was less impacted than MiSeq to different variable regions.</p>
-<p><span class="citation">Kozich et al. (<a href="references.html#ref-Kozich2013">2013</a>)</span> compared the results for three different variable regions sequenced using the MiSeq platform. The three regions, V34, V4, and V45 represented different length (250 bp, 430 bp, and 375 bp) though overlapping target regions. The observed error rate varied between run as well as variable regions resulting in differences in predicted OTUs. V45 had the highest predicted OTUs for all samples and replicate sequencing runs, followed by V34 and V4. The number of observed OTUs was higher for all datasets than expected for the mock community datasets.</p>
+<p><span class="citation">Clooney et al. (<a href="#ref-Clooney2016">2016</a>)</span> Compared sequencing data between platforms and variable regions. Based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the V12 and V45 primer regions, PGM sequencing data was less impacted than MiSeq to different variable regions.</p>
+<p><span class="citation">Kozich et al. (<a href="#ref-Kozich2013">2013</a>)</span> compared the results for three different variable regions sequenced using the MiSeq platform. The three regions, V34, V4, and V45 represented different length (250 bp, 430 bp, and 375 bp) though overlapping target regions. The observed error rate varied between run as well as variable regions resulting in differences in predicted OTUs. V45 had the highest predicted OTUs for all samples and replicate sequencing runs, followed by V34 and V4. The number of observed OTUs was higher for all datasets than expected for the mock community datasets.</p>
 </div>
 <div id="pcr-primers-optional-barcoded-primers" class="section level4">
 <h4><span class="header-section-number">4.1.3.3</span> PCR primers (optional barcoded primers)</h4>
-<p><span class="citation">Albertsen et al. (<a href="references.html#ref-Albertsen2015">2015</a>)</span> performed both an <em>in silico</em> and <em>in vitro</em> comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets. The author’s concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system.</p>
-<p><span class="citation">Esling, Lejzerowicz, and Pawlowski (<a href="references.html#ref-Esling2015">2015</a>)</span> developed a latin square barcode design to facilitate detection and removal of cross-contamination along with tools for implenting their recomended barcoding methods, <a href="https://github.com/esling/mistagging" class="uri">https://github.com/esling/mistagging</a>.</p>
-<p><span class="citation">D’Amore et al. (<a href="references.html#ref-Amore2016">2016</a>)</span> evaluated the impact of primer mismatches using a mock community dataset by correlating abundance with mismatches.</p>
-<p><span class="citation">Engelbrektson et al. (<a href="references.html#ref-Engelbrektson2010">2010</a>)</span> explored the impact of different primers, variable regions, and amplicon legnths on $diversity metrics for termine gut samples. Amplicon lengths impacted diversity and richness estimates but primers targeting the same region had consistent results.</p>
+<p><span class="citation">Albertsen et al. (<a href="#ref-Albertsen2015">2015</a>)</span> performed both an <em>in silico</em> and <em>in vitro</em> comparison of primer regions as well as comparing the relative abundance of different Phyla to metagenomic and metatranscriptomic datasets. The author’s concluded by recomending V13 for activated sludge samples based on what is known about the community composition of the system.</p>
+<p><span class="citation">Esling, Lejzerowicz, and Pawlowski (<a href="#ref-Esling2015">2015</a>)</span> developed a latin square barcode design to facilitate detection and removal of cross-contamination along with tools for implenting their recomended barcoding methods, <a href="https://github.com/esling/mistagging" class="uri">https://github.com/esling/mistagging</a>.</p>
+<p><span class="citation">D’Amore et al. (<a href="#ref-Amore2016">2016</a>)</span> evaluated the impact of primer mismatches using a mock community dataset by correlating abundance with mismatches.</p>
+<p><span class="citation">Engelbrektson et al. (<a href="#ref-Engelbrektson2010">2010</a>)</span> explored the impact of different primers, variable regions, and amplicon legnths on $diversity metrics for termine gut samples. Amplicon lengths impacted diversity and richness estimates but primers targeting the same region had consistent results.</p>
 </div>
 <div id="pcr-reagents" class="section level4">
 <h4><span class="header-section-number">4.1.3.4</span> PCR reagents</h4>
 <ul>
+<li>Error rates vary based on the polymerase being used, it is commonly recommended that a high fidelity polymerase is used.</li>
+<li>DNA polymerase from organisms can remain in extracted DNA after purification and potentially amplify the organisms DNA and potentially risk skewing experiments when comparing microbiomes from different environments <span class="citation">(Marx <a href="#ref-Marx2016">2016</a>)</span>. This has not been tested therefore the impact is unknown.<br />
+</li>
+<li>Can calcualte the errors due to PCR using first principles <span class="citation">(Marx <a href="#ref-Marx2016">2016</a>)</span></li>
 <li>Polymerase - high fidelity<br />
 </li>
 <li>Reagent contaminats</li>
@@ -287,9 +298,9 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </div>
 <div id="number-of-cycles" class="section level4">
 <h4><span class="header-section-number">4.1.3.6</span> number of cycles</h4>
-<p>Using a mock community of 68 organisms <span class="citation">D’Amore et al. (<a href="references.html#ref-Amore2016">2016</a>)</span> showed that increasing the number of PCR cycles resulted in increased sequencing error rates (0.58% vs. 0.64% p = 0.11) and chimeras (15 cycles 0.00% and 25 cycles 0.66%, p = 0.0245).</p>
-<p><span class="citation">Albertsen et al. (<a href="references.html#ref-Albertsen2015">2015</a>)</span> evaluated the amount of template and cycle number but only observed “small changes”. Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.</p>
-<p><span class="citation">Yu et al. (<a href="references.html#ref-Yu2015">2015</a>)</span> compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and <span class="math inline">\(\beta\)</span> diversity.</p>
+<p>Using a mock community of 68 organisms <span class="citation">D’Amore et al. (<a href="#ref-Amore2016">2016</a>)</span> showed that increasing the number of PCR cycles resulted in increased sequencing error rates (0.58% vs. 0.64% p = 0.11) and chimeras (15 cycles 0.00% and 25 cycles 0.66%, p = 0.0245).</p>
+<p><span class="citation">Albertsen et al. (<a href="#ref-Albertsen2015">2015</a>)</span> evaluated the amount of template and cycle number but only observed “small changes”. Decreasing the annealing temperatures of 58C and 52C resulted in increased abundance of prevously low abundance OTU with no impact on high abundance OTUs.</p>
+<p><span class="citation">Yu et al. (<a href="#ref-Yu2015">2015</a>)</span> compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and <span class="math inline">\(\beta\)</span> diversity.</p>
 </div>
 <div id="sequence-copy-abundance" class="section level4">
 <h4><span class="header-section-number">4.1.3.7</span> sequence copy abundance</h4>
@@ -300,8 +311,8 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </div>
 <div id="library-preparation" class="section level3">
 <h3><span class="header-section-number">4.1.4</span> Library Preparation</h3>
-<p><span class="citation">Kennedy et al. (<a href="references.html#ref-Kennedy2014">2014</a>)</span> found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.</p>
-<p><span class="citation">Schirmer et al. (<a href="references.html#ref-Schirmer2015">2015</a>)</span> sequenced a mock community of 59 different strains to evaluate the sequencing error rate for different sample processing methods. Though only fully characterizing a subset of a the results.</p>
+<p><span class="citation">Kennedy et al. (<a href="#ref-Kennedy2014">2014</a>)</span> found that variability due to PCR (particularly template concentration) resulted in less variability for within sample results than sample preparation (library preparation) and inter-lane variability. Barcoded 16S PCR primers were used in the study therefore the impact of barcodes and variability of 16S PCR was confounded.</p>
+<p><span class="citation">Schirmer et al. (<a href="#ref-Schirmer2015">2015</a>)</span> sequenced a mock community of 59 different strains to evaluate the sequencing error rate for different sample processing methods. Though only fully characterizing a subset of a the results.</p>
 <div id="barcode-indexing-optional" class="section level4">
 <h4><span class="header-section-number">4.1.4.1</span> Barcode/ indexing (optional)</h4>
 <ul>
@@ -347,7 +358,7 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 </ul></li>
 <li>Studies comparing platforms
 <ul>
-<li><span class="citation">Clooney et al. (<a href="references.html#ref-Clooney2016">2016</a>)</span> compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM. Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results <span class="citation">(Clooney et al. <a href="references.html#ref-Clooney2016">2016</a>, fig. 1)</span>.</li>
+<li><span class="citation">Clooney et al. (<a href="#ref-Clooney2016">2016</a>)</span> compared 16S rRNA sequence data for environmental samples sequenced using two platforms MiSeq and PGM. Comparing results between stool samples from six individuals based on the relative abundance of genera present in 20% of the datasets (including whole metagenome sequencing (WMS)) the datasets clustered together based on sequencing methods (platform and primers) rather than individual, with WMS clustering seperately form the 16S results <span class="citation">(Clooney et al. <a href="#ref-Clooney2016">2016</a>, fig. 1)</span>.</li>
 </ul></li>
 <li>Sequencing errors
 <ul>
@@ -425,7 +436,7 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <ul>
 <li>FLASH<br />
 </li>
-<li>PANDAseq <span class="citation">Masella et al. (<a href="references.html#ref-masella2012pandaseq">2012</a>)</span>
+<li>PANDAseq <span class="citation">Masella et al. (<a href="#ref-masella2012pandaseq">2012</a>)</span>
 <ul>
 <li>Uses a probabilitistic approach to generating contigs from paired-end reads
 <ul>
@@ -477,7 +488,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <li>Algorithm Summary
 <ul>
 <li>Optimizes assembly score for based on base quality score and mismatches</li>
-<li>See <span class="citation">J. Zhang et al. (<a href="references.html#ref-zhang2014pear">2014</a>)</span> for alignment base probability calculations<br />
+<li>See <span class="citation">J. Zhang et al. (<a href="#ref-zhang2014pear">2014</a>)</span> for alignment base probability calculations<br />
 </li>
 <li>Developed Observed Expected alignment score (OES) for use in testing significance of merge</li>
 </ul></li>
@@ -514,7 +525,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <li>Distance based clustering is a NP hard problem (i.e. computationaly intense), therefore a number of heuristics are used to make the method computationally tractable for large datasets.</li>
 <li>Threshold are used to define the similarity of sequences within a cluster, 99% and 97% are commonly used.
 <ul>
-<li>Some biological and sequencing error basis for threshold values, (e.g. 99% species level, 97% genus level, 1% error rate). Taxonomic variability in 16S rRNA sequence diversity (Pai?) and sequencing error <span class="citation">(Huse et al. <a href="references.html#ref-Huse2010">2010</a>, <span class="citation">Schirmer et al. (<a href="references.html#ref-Schirmer2015">2015</a>)</span>, <span class="citation">D’Amore et al. (<a href="references.html#ref-Amore2016">2016</a>)</span>)</span> challenges the validity of these values.</li>
+<li>Some biological and sequencing error basis for threshold values, (e.g. 99% species level, 97% genus level, 1% error rate). Taxonomic variability in 16S rRNA sequence diversity (Pai?) and sequencing error <span class="citation">(Huse et al. <a href="#ref-Huse2010">2010</a>, <span class="citation">Schirmer et al. (<a href="#ref-Schirmer2015">2015</a>)</span>, <span class="citation">D’Amore et al. (<a href="#ref-Amore2016">2016</a>)</span>)</span> challenges the validity of these values.</li>
 </ul></li>
 <li>Different distance based thresholds.
 <ul>
@@ -532,7 +543,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 </li>
 <li>oligotyping<br />
 </li>
-<li>tree based clustering <span class="citation">(D. Wu, Doroud, and Eisen <a href="references.html#ref-Wu2013">2013</a>)</span></li>
+<li>tree based clustering <span class="citation">(D. Wu, Doroud, and Eisen <a href="#ref-Wu2013">2013</a>)</span></li>
 </ul></li>
 <li>De novo vs Reference based clustering
 <ul>
@@ -543,7 +554,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 </div>
 <div id="taxonomic-assignment" class="section level3">
 <h3><span class="header-section-number">4.2.3</span> Taxonomic Assignment</h3>
-<p>Assign clusters a taxonomic name * <span class="citation">(“Comparison of two next-generation sequencing technologies for resolving highly complex microbiota composition using tandem variable 16S rRNA gene regions.” <a href="references.html#ref-Claesson2010">2010</a>)</span> <em>in silico</em> analysis of the taxonomic resolution for different variable regions and read lengths (454 and MISeq 150, 100, 75, and 50 bp paired end reads) and primers.</p>
+<p>Assign clusters a taxonomic name * <span class="citation">(“Comparison of two next-generation sequencing technologies for resolving highly complex microbiota composition using tandem variable 16S rRNA gene regions.” <a href="#ref-Claesson2010">2010</a>)</span> <em>in silico</em> analysis of the taxonomic resolution for different variable regions and read lengths (454 and MISeq 150, 100, 75, and 50 bp paired end reads) and primers.</p>
 </div>
 </div>
 <div id="downstream-analysis" class="section level2">
@@ -560,7 +571,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <li>Effect size, sample size, abundance<br />
 </li>
 </ul></li>
-<li>See <span class="citation">Jonsson et al. (<a href="references.html#ref-Jonsson2016">2016</a>)</span> for summary of different methods<br />
+<li>See <span class="citation">Jonsson et al. (<a href="#ref-Jonsson2016">2016</a>)</span> for summary of different methods<br />
 </li>
 <li>Overview of different methods and approaches
 <ul>
@@ -577,29 +588,29 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <ul>
 <li>Measure of biological or ecological diversity within a sample.<br />
 </li>
-<li>Alpha diversity as a continuum related to the metric dependence on richness and evenness <span class="citation">(Chao et al. <a href="references.html#ref-Chao2014">2014</a>)</span></li>
-<li>Four primary categories richness, evenness, abundance weighted, and dissimilarity <span class="citation">(Ricotta <a href="references.html#ref-Ricotta2007">2007</a>)</span>
+<li>Alpha diversity as a continuum related to the metric dependence on richness and evenness <span class="citation">(Chao et al. <a href="#ref-Chao2014">2014</a>)</span></li>
+<li>Four primary categories richness, evenness, abundance weighted, and dissimilarity <span class="citation">(Ricotta <a href="#ref-Ricotta2007">2007</a>)</span>
 <ul>
 <li>Richness
 <ul>
-<li>Hill numbers, rarefaction, and richness estimation <span class="citation">(Chao et al. <a href="references.html#ref-Chao2014">2014</a>)</span></li>
+<li>Hill numbers, rarefaction, and richness estimation <span class="citation">(Chao et al. <a href="#ref-Chao2014">2014</a>)</span></li>
 </ul></li>
 <li>Evenness
 <ul>
-<li>Criteria for evaluating evenness metrics <span class="citation">(Tuomisto <a href="references.html#ref-Tuomisto2012">2012</a>)</span></li>
-<li>See <span class="citation">Tuomisto (<a href="references.html#ref-Tuomisto2012">2012</a>)</span> Table 1 for summary of evenness metric including interpretation</li>
+<li>Criteria for evaluating evenness metrics <span class="citation">(Tuomisto <a href="#ref-Tuomisto2012">2012</a>)</span></li>
+<li>See <span class="citation">Tuomisto (<a href="#ref-Tuomisto2012">2012</a>)</span> Table 1 for summary of evenness metric including interpretation</li>
 </ul></li>
 <li>Abundance weighted</li>
 <li>Dissimilarity</li>
 </ul></li>
-<li>Parametric vs. Non-parametric diversity metrics for 16S rRNA sequence analysis <span class="citation">(Bunge, Willis, and Walsh <a href="references.html#ref-Bunge2014">2014</a>)</span></li>
+<li>Parametric vs. Non-parametric diversity metrics for 16S rRNA sequence analysis <span class="citation">(Bunge, Willis, and Walsh <a href="#ref-Bunge2014">2014</a>)</span></li>
 <li>Development of alpha diversity richness metric for microbial diversity.
 <ul>
 <li>Chao1 a traditional diversity metric estimates total diversity using the number of singletons, OTUs representing only a single sequence.
 <ul>
 <li>Issue with singleton based diversity metrics for microbial diversity is that for incresed sequencing depth the number of singletons with continue to increase due to sequencing errors, leading to artifically inflated diversity estimates.</li>
 </ul></li>
-<li><span class="citation">Chiu and Chao (<a href="references.html#ref-Chiu2015">2015</a>)</span> developed a modified version of the Chao1 estimator that is more robust to singletons bue to sequencing errors.</li>
+<li><span class="citation">Chiu and Chao (<a href="#ref-Chiu2015">2015</a>)</span> developed a modified version of the Chao1 estimator that is more robust to singletons bue to sequencing errors.</li>
 <li>This method estimates diversity based on the number of doubletons to tentons.<br />
 </li>
 <li>Incorporates Hill numbers as well.</li>
@@ -613,10 +624,115 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <div id="step-by-step-protocols" class="section level2">
 <h2><span class="header-section-number">4.4</span> Step-by-Step protocols</h2>
 <ul>
-<li><span class="citation">Albertsen et al. (<a href="references.html#ref-Albertsen2015">2015</a>)</span> Activated Sludge <a href="http://www.midasfieldguide.org/" class="uri">http://www.midasfieldguide.org/</a></li>
+<li><span class="citation">Albertsen et al. (<a href="#ref-Albertsen2015">2015</a>)</span> Activated Sludge <a href="http://www.midasfieldguide.org/" class="uri">http://www.midasfieldguide.org/</a></li>
 <li>List of tools for each step in the sequence analysis workflow <a href="http://h3abionet.org/tools-and-resources/sops/16s-rrna-diversity-analysis" class="uri">http://h3abionet.org/tools-and-resources/sops/16s-rrna-diversity-analysis</a></li>
 </ul>
 
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-Goodrich2014">
+<p>Goodrich, Julia K., Sara C. Di Rienzi, Angela C. Poole, Omry Koren, William A. Walters, J. Gregory Caporaso, Rob Knight, and Ruth E. Ley. 2014. “Conducting a Microbiome Study.” <em>Cell</em> 158 (2). Elsevier Inc.: 250–62. doi:<a href="https://doi.org/10.1016/j.cell.2014.06.037">10.1016/j.cell.2014.06.037</a>.</p>
+</div>
+<div id="ref-Zhou2011">
+<p>Zhou, Jizhong, Liyou Wu, Ye Deng, Xiaoyang Zhi, Yi-Huei Jiang, Qichao Tu, Jianping Xie, Joy D Van Nostrand, Zhili He, and Yunfeng Yang. 2011. “Reproducibility and quantitation of amplicon sequencing-based detection.” <em>The ISME Journal</em> 5 (8). Nature Publishing Group: 1303–13. doi:<a href="https://doi.org/10.1038/ismej.2011.11">10.1038/ismej.2011.11</a>.</p>
+</div>
+<div id="ref-Flores2015">
+<p>Flores, Roberto, Jianxin Shi, Guoqin Yu, Bing Ma, Jacques Ravel, James J. Goedert, and Rashmi Sinha. 2015. “Collection media and delayed freezing effects on microbial composition of human stool.” <em>Microbiome</em> 3 (1). BioMed Central Ltd: 33. doi:<a href="https://doi.org/10.1186/s40168-015-0092-7">10.1186/s40168-015-0092-7</a>.</p>
+</div>
+<div id="ref-Hill2016">
+<p>Hill, Cian J, Jillian R M Brown, Denise B Lynch, Ian B Jeffery, C Anthony Ryan, R Paul Ross, Catherine Stanton, and Paul W O’Toole. 2016. “Effect of room temperature transport vials on DNA quality and phylogenetic composition of faecal microbiota of elderly adults and infants.” <em>Microbiome</em> 4 (1). BioMed Central: 19. doi:<a href="https://doi.org/10.1186/s40168-016-0164-3">10.1186/s40168-016-0164-3</a>.</p>
+</div>
+<div id="ref-Lauber2011">
+<p>Lauber, Christian L, Nicholas Zhou, Jeffrey I Gordon, and Rob Knight. 2011. “Effect of storage conditions on the assessment of bacterial community sturture in soil nad human-associated samples.” <em>FEMS Microbiology Letters</em> 307 (1): 80–86. doi:<a href="https://doi.org/10.1111/j.1574-6968.2010.01965.x.Effect">10.1111/j.1574-6968.2010.01965.x.Effect</a>.</p>
+</div>
+<div id="ref-Wu2010">
+<p>Wu, Gary D, James D Lewis, Christian Hoffmann, Ying-Yu Chen, Rob Knight, Kyle Bittinger, Jennifer Hwang, et al. 2010. “Sampling and pyrosequencing methods for characterizing bacterial communities in the human gut using 16S sequence tags.” <em>BMC Microbiology</em> 10 (January): 206. doi:<a href="https://doi.org/10.1186/1471-2180-10-206">10.1186/1471-2180-10-206</a>.</p>
+</div>
+<div id="ref-Sinha2016">
+<p>Sinha, Rashmi, Jun Chen, Amnon Amir, Emily Vogtmann, Jianxin Shi, Kristin S Inman, Roberto Flores, Joshua Sampson, Rob Knight, and Nicholas Chia. 2016. “Collecting Fecal Samples for Microbiome Analyses in Epidemiology Studies.” <em>Cancer Epidemiology, Biomarkers &amp; Prevention : A Publication of the American Association for Cancer Research, Cosponsored by the American Society of Preventive Oncology</em> 25 (2): 407–16. doi:<a href="https://doi.org/10.1158/1055-9965.EPI-15-0951">10.1158/1055-9965.EPI-15-0951</a>.</p>
+</div>
+<div id="ref-Carini2016">
+<p>Carini, Paul, Patrick J Marsden, Jonathan W Leff, Emily E Morgan, Michael S Strickland, and Noah Fierer. 2016. “Relic DNA is abundant in soil and obscures estimates of soil microbial diversity.” Cold Spring Harbor Labs Journals. doi:<a href="https://doi.org/10.1101/043372">10.1101/043372</a>.</p>
+</div>
+<div id="ref-Blazewicz2013">
+<p>Blazewicz, Steven J, Romain L Barnard, Rebecca A Daly, and Mary K Firestone. 2013. “Evaluating rRNA as an indicator of microbial activity in environmental communities: limitations and uses.” <em>The ISME Journal</em> 7 (11). International Society for Microbial Ecology: 2061–8. doi:<a href="https://doi.org/10.1038/ismej.2013.102">10.1038/ismej.2013.102</a>.</p>
+</div>
+<div id="ref-Cangelosi2014">
+<p>Cangelosi, Gerard A, and John S Meschke. 2014. “Dead or alive: molecular assessment of microbial viability.” <em>Applied and Environmental Microbiology</em> 80 (19): 5884–91. doi:<a href="https://doi.org/10.1128/AEM.01763-14">10.1128/AEM.01763-14</a>.</p>
+</div>
+<div id="ref-Albertsen2015">
+<p>Albertsen, Mads, Søren M Karst, Anja S Ziegler, Rasmus H Kirkegaard, and Per H Nielsen. 2015. “Back to Basics - The Influence of DNA Extraction and Primer Choice on Phylogenetic Analysis of Activated Sludge Communities.” <em>PloS One</em> 10 (7). Public Library of Science: e0132783. doi:<a href="https://doi.org/10.1371/journal.pone.0132783">10.1371/journal.pone.0132783</a>.</p>
+</div>
+<div id="ref-Olson2012">
+<p>Olson, Nathan D, and Jayne B Morrow. 2012. “DNA extract characterization process for microbial detection methods development and validation.” <em>BMC Research Notes</em> 5 (1). BMC Research Notes: 668. doi:<a href="https://doi.org/10.1186/1756-0500-5-668">10.1186/1756-0500-5-668</a>.</p>
+</div>
+<div id="ref-Carrigg2007">
+<p>Carrigg, Cora, Olivia Rice, Siobhán Kavanagh, Gavin Collins, and Vincent O’Flaherty. 2007. “DNA extraction method affects microbial community profiles from soils and sediment.” <em>Applied Microbiology and Biotechnology</em> 77 (4): 955–64. doi:<a href="https://doi.org/10.1007/s00253-007-1219-y">10.1007/s00253-007-1219-y</a>.</p>
+</div>
+<div id="ref-Ettenauer2012">
+<p>Ettenauer, Jörg D, Guadalupe Piñar, Ksenija Lopandic, Bernhard Spangl, Günther Ellersdorfer, Christian Voitl, and Katja Sterflinger. 2012. “Microbes on building materials - Evaluation of DNA extraction protocols as common basis for molecular analysis.” <em>The Science of the Total Environment</em> 439C (October). Elsevier B.V.: 44–53. doi:<a href="https://doi.org/10.1016/j.scitotenv.2012.09.005">10.1016/j.scitotenv.2012.09.005</a>.</p>
+</div>
+<div id="ref-Kennedy2014">
+<p>Kennedy, Katherine, Michael W. Hall, Michael D J Lynch, Gabriel Moreno-Hagelsieb, and Josh D. Neufeld. 2014. “Evaluating bias of Illumina-based bacterial 16S rRNA gene profiles.” <em>Applied and Environmental Microbiology</em> 80 (18): 5717–22. doi:<a href="https://doi.org/10.1128/AEM.01451-14">10.1128/AEM.01451-14</a>.</p>
+</div>
+<div id="ref-Amore2016">
+<p>D’Amore, Rosalinda, Umer Zeeshan Ijaz, Melanie Schirmer, John G Kenny, Richard Gregory, Alistair C Darby, Christopher Quince, et al. 2016. “A comprehensive benchmarking study of protocols and sequencing platforms for 16S rRNA community profiling.” <em>BMC Genomics</em> 17. BMC Genomics: 1–40. doi:<a href="https://doi.org/10.1186/s12864-015-2194-9">10.1186/s12864-015-2194-9</a>.</p>
+</div>
+<div id="ref-Clooney2016">
+<p>Clooney, Adam G, Fiona Fouhy, Roy D Sleator, Aisling O’ Driscoll, Catherine Stanton, Paul D Cotter, and Marcus J Claesson. 2016. “Comparing Apples and Oranges?: Next Generation Sequencing and Its Impact on Microbiome Analysis.” <em>PloS One</em> 11 (2): e0148028. doi:<a href="https://doi.org/10.1371/journal.pone.0148028">10.1371/journal.pone.0148028</a>.</p>
+</div>
+<div id="ref-Kozich2013">
+<p>Kozich, James J., Sarah L. Westcott, Nielson T. Baxter, Sarah K. Highlander, and Patrick D. Schloss. 2013. “Development of a Dual-Index Sequencing Strategy and Curation Pipeline for Analyzing Amplicon Sequence Data on the MiSeq Illumina Sequencing Platform.” <em>Applied and Environmental Microbiology</em> 79 (17): 5112–20. doi:<a href="https://doi.org/10.1128/AEM.01043-13">10.1128/AEM.01043-13</a>.</p>
+</div>
+<div id="ref-Esling2015">
+<p>Esling, Philippe, Franck Lejzerowicz, and Jan Pawlowski. 2015. “Accurate multiplexing and filtering for high-throughput amplicon-sequencing.” <em>Nucleic Acids Research</em> 43 (10): 2513–24. doi:<a href="https://doi.org/10.1093/nar/gkv107">10.1093/nar/gkv107</a>.</p>
+</div>
+<div id="ref-Engelbrektson2010">
+<p>Engelbrektson, Anna, Victor Kunin, Kelly C Wrighton, Natasha Zvenigorodsky, Feng Chen, Howard Ochman, and Philip Hugenholtz. 2010. “Experimental factors affecting PCR-based estimates of microbial species richness and evenness.” <em>The ISME Journal</em> 4 (5). Nature Publishing Group: 642–7. doi:<a href="https://doi.org/10.1038/ismej.2009.153">10.1038/ismej.2009.153</a>.</p>
+</div>
+<div id="ref-Marx2016">
+<p>Marx, Vivien. 2016. “PCR: the price of infidelity.” <em>Nature Methods</em> 13 (6). Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.: 475–9. doi:<a href="https://doi.org/10.1038/nmeth.3868">10.1038/nmeth.3868</a>.</p>
+</div>
+<div id="ref-Yu2015">
+<p>Yu, Guoqin, Doug Fadrosh, James J. Goedert, Jacques Ravel, and Alisa M. Goldstein. 2015. “Nested PCR Biases in Interpreting Microbial Community Structure in 16S rRNA Gene Sequence Datasets.” <em>Plos One</em> 10 (7): e0132253. doi:<a href="https://doi.org/10.1371/journal.pone.0132253">10.1371/journal.pone.0132253</a>.</p>
+</div>
+<div id="ref-Schirmer2015">
+<p>Schirmer, Melanie, Umer Z. Ijaz, Rosalinda D’Amore, Neil Hall, William T. Sloan, and Christopher Quince. 2015. “Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform.” <em>Nucleic Acids Research</em> 43 (6). doi:<a href="https://doi.org/10.1093/nar/gku1341">10.1093/nar/gku1341</a>.</p>
+</div>
+<div id="ref-masella2012pandaseq">
+<p>Masella, Andre P, Andrea K Bartram, Jakub M Truszkowski, Daniel G Brown, and Josh D Neufeld. 2012. “PANDAseq: Paired-End Assembler for Illumina Sequences.” <em>BMC Bioinformatics</em> 13 (1). BioMed Central Ltd: 31.</p>
+</div>
+<div id="ref-zhang2014pear">
+<p>Zhang, Jiajie, Kassian Kobert, Tomáš Flouri, and Alexandros Stamatakis. 2014. “PEAR: A Fast and Accurate Illumina Paired-End ReAd MergeR.” <em>Bioinformatics</em> 30 (5). Oxford Univ Press: 614–20.</p>
+</div>
+<div id="ref-Huse2010">
+<p>Huse, Susan M, David Mark Welch, Hilary G Morrison, and Mitchell L Sogin. 2010. “Ironing out the wrinkles in the rare biosphere through improved OTU clustering.” <em>Environmental Microbiology</em> 12 (7): 1889–98. doi:<a href="https://doi.org/10.1111/j.1462-2920.2010.02193.x">10.1111/j.1462-2920.2010.02193.x</a>.</p>
+</div>
+<div id="ref-Wu2013">
+<p>Wu, Dongying, Ladan Doroud, and Jonathan a. Eisen. 2013. “TreeOTU Operational Taxonomic Unit Classification Based on Phylogenetic Trees.” <em>Arxiv.Org</em>, 23. <a href="http://arxiv.org/abs/1308.6333" class="uri">http://arxiv.org/abs/1308.6333</a>.</p>
+</div>
+<div id="ref-Claesson2010">
+<p>“Comparison of two next-generation sequencing technologies for resolving highly complex microbiota composition using tandem variable 16S rRNA gene regions.” 2010. <em>Nucleic Acids Research</em> 38 (22). Department of Microbiology, University College Cork, Cork, Ireland. mclaesson@bioinfo.ucc.ie; Oxford University Press: e200. doi:<a href="https://doi.org/10.1093/nar/gkq873">10.1093/nar/gkq873</a>.</p>
+</div>
+<div id="ref-Jonsson2016">
+<p>Jonsson, Viktor, Tobias Österlund, Olle Nerman, and Erik Kristiansson. 2016. “Statistical evaluation of methods for identification of differentially abundant genes in comparative metagenomics.” <em>BMC Genomics</em> 17 (1). BioMed Central: 78. doi:<a href="https://doi.org/10.1186/s12864-016-2386-y">10.1186/s12864-016-2386-y</a>.</p>
+</div>
+<div id="ref-Chao2014">
+<p>Chao, Anne, Nicholas J. Gotelli, T. C. Hsieh, Elizabeth L. Sander, K. H. Ma, Robert K. Colwell, and Aaron M. Ellison. 2014. “Rarefaction and extrapolation with Hill numbers: A framework for sampling and estimation in species diversity studies.” <em>Ecological Monographs</em> 84 (1): 45–67. doi:<a href="https://doi.org/10.1890/13-0133.1">10.1890/13-0133.1</a>.</p>
+</div>
+<div id="ref-Ricotta2007">
+<p>Ricotta, Carlo. 2007. “A semantic taxonomy for diversity measures.” <em>Acta Biotheoretica</em> 55 (1): 23–33. doi:<a href="https://doi.org/10.1007/s10441-007-9008-7">10.1007/s10441-007-9008-7</a>.</p>
+</div>
+<div id="ref-Tuomisto2012">
+<p>Tuomisto, Hanna. 2012. “An updated consumer’s guide to evenness and related indices.” <em>Oikos</em> 121 (8): 1203–18. doi:<a href="https://doi.org/10.1111/j.1600-0706.2011.19897.x">10.1111/j.1600-0706.2011.19897.x</a>.</p>
+</div>
+<div id="ref-Bunge2014">
+<p>Bunge, John, Amy Willis, and Fiona Walsh. 2014. “Estimating the Number of Species in Microbial Diversity Studies.” <em>Annual Review of Statistics and Its Application</em> 1 (1): 427–45. doi:<a href="https://doi.org/10.1146/annurev-statistics-022513-115654">10.1146/annurev-statistics-022513-115654</a>.</p>
+</div>
+<div id="ref-Chiu2015">
+<p>Chiu, Chun-Huo, and Anne Chao. 2015. “Estimating and comparing microbial diversity in the presence of sequencing errors.” <em>PeerJ</em>, 1–13. doi:<a href="https://doi.org/10.7287/peerj.preprints.11">10.7287/peerj.preprints.11</a>.</p>
 </div>
 </div>
             </section>
@@ -627,7 +743,7 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 <a href="process-characterization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="s-rrna-analysis-method-assessment.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
-<script src="libs/gitbook/js/app.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
 <script src="libs/gitbook/js/lunr.js"></script>
 <script src="libs/gitbook/js/plugin-search.js"></script>
 <script src="libs/gitbook/js/plugin-sharing.js"></script>
