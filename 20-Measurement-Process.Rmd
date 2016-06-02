@@ -116,7 +116,10 @@ Considerations:
 @Engelbrektson2010 explored the impact of different primers, variable regions, and amplicon legnths on $\alpha diversity metrics for termine gut samples. Amplicon lengths impacted diversity and richness estimates but primers targeting the same region had consistent results.   
 
 #### PCR reagents  
-
+* Error rates vary based on the polymerase being used, it is commonly recommended that a high fidelity polymerase is used.
+* DNA polymerase from organisms can remain in extracted DNA after purification and potentially amplify the organisms DNA and potentially risk skewing experiments when comparing microbiomes from different environments [@Marx2016]. 
+This has not been tested therefore the impact is unknown.   
+* Can calcualte the errors due to PCR using first principles [@Marx2016]
 * Polymerase - high fidelity  
 * Reagent contaminats  
 
