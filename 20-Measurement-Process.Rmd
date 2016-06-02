@@ -59,6 +59,14 @@ The part consists of five main steps:
 - Impact of sample storage   
     - @Flores2015 evaluated impact of storage conditions on 16S metagenomics.  The study results supported the use of RNALater as storage media after evaluating the different temperature, media, and duration for biological replicate stool samples. The results were evaluated using intraclass correlation coefficients as well as $\alpha$ and $\beta$ diversity. __DATA NOT PUBLICALLY AVAILABLE!!!!!__    
     - Old coral study?  
+    - @Hill2016 evlauated the use of DNA Genotek storage vial on microbiomes for infant and elderly samples. 
+    Found OTU specific differential abundance results. 
+    Elderly samples were less impacted by storage than infant samples.     Results suggest that the impact of storage conditions is organism specific. 
+    - @Lauber2011 study evaluating the impact of storage conditions, weighted UniFrac community analysis not impacted by storage conditions, whereaas for skin communities storage conditions impacted  unweighted UniFrac results.  
+    - @Wu2010 another study evaluating the impact of storage conditions  
+    - @Sinha2016 compared impact of storage and sample collection methods for fecal microbiome studies as part of an interlaboratory study. 
+    Found storage methods produced similar results to samples immediately processed.
+    Differences in results between laboratories are likely due to differences in sample processing methods (e.g. DNA extraction method, PCR primers, target region) than a laboratory effect.  
 
 ### Sample Processing
 
