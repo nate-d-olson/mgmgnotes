@@ -208,12 +208,48 @@ Convering raw sequence data to a OTU table with taxonomic annotations for use in
 * Merging paired ends
   - Merging forward and reverse reads into single contigs  
       + Methods
-          * Perfect overlap - DADA2  
+          * Perfect overlap - DADA2 
           * dynamic programming - mothur  
-          * optimization - FLASH  
-          * Probabilistic??
-              - PANDAseq  
-              - PEAR?  
+          * Probabilistic/ Optimization   
+              - FLASH  
+              - PANDAseq  @masella2012pandaseq
+                + Uses a probabilitistic approach to generating contigs from paired-end reads 
+                    * First finds primers in forward and reverse sequences (optional)  
+                    * Determines overlap by maximizing the Probablity of the contig for overlap length greater than the user defined value.
+                        - Bases in Non-overlaping regions assigned probability of 1/4  
+                        - Bases in overlaping regions assigned a probability based on the assigned base quality score and whether the bases agree between the forward and reverse reads.  
+                        _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, and UPARSE 
+                        
+                    * Assigns base and quality score for overlap regions  
+                        - for disagreements assigns base for higher quality score and assigns probability using a probabilistic method using the fastq quality scores
+                    * Calculate contig average error - geometric mean [$\left(\prod^n_{i=1}x_i\right)^{1/n}$]of the assigned quality scores
+                + Calculates the probability of an observed base using the assigned quality scores  
+                    * conditional probability that the true nucleotides for the aligned paired end reads given the observed nucleotides  
+                    * Assumes equal probablity for alternative (non-observed bases)  
+                    * Option to use primer sequences location and removal during overlap generation  
+                    
+                + Filter/ validating contigs 
+                    * average contig quality score (removed in v2.8 due to bug) 
+                    * contig length   
+                    * ambiguous bases  
+                    * optional - known secondary structure, conserved regions, not implemented in distribution
+                    * statistical methods - pear false positive test  
+                + Method evaluation  
+                    * Simulated data - test algorithm correctness  
+                    * single template amplicon PCR - check contig quality  
+                    * defined fragment mixture to check assembly yields  
+                    
+              - PEAR
+                + Algorithm Summary  
+                    * Optimizes assembly score for based on base quality score and mismatches 
+                    * See @zhang2014pear for alignment base probability calculations  
+                    * Developed Observed Expected alignment score (OES) for use in testing significance of merge 
+                + Method Evaluation
+                    * simulated data comparison of multiple paired-end assembly methods for multiple fragment sizes and overlap 
+                    * Compared based on the number of merged contigs and false positive rate, also assessed computational cost  
+                    * Also evaluated using single organism datasets
+                    
+              
 * chimera detection
   - detection and removal of chimeric reads, artifact of the PCR amplification process.  
       + ChimeraSlayer  
@@ -283,3 +319,4 @@ Assign clusters a taxonomic name
 ## Step-by-Step protocols  
 
 * @Albertsen2015 Activated Sludge http://www.midasfieldguide.org/
+* List of tools for each step in the sequence analysis workflow http://h3abionet.org/tools-and-resources/sops/16s-rrna-diversity-analysis 
