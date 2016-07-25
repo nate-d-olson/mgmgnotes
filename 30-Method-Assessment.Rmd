@@ -107,15 +107,36 @@ Beblur - https://github.com/ekopylova/deblur
     - The limitation to this approach is that it does not account for contaminants when __in vitro__ mock communities are used, and neither __in silico__ or __in vitro__ datasets represent the true complexity and diversity of environmental samples.  
 
 
-## Downstream analysis  
+## Downstream analysis 
+### Transformations
+* __NEED TO FIND A HOME__
+* @love2014moderated plot the standard deviation and rank mean count values as diagnostic plots validating regularized log transformation method.
+
+
 ### taxonomic classification  
-### differential abundance  
+
+### Differential Abundance  
 * Key parameters  
     - sample size  
     - effect size (fold change)  
-    - abundance (count)  
+    - abundance (count) 
 * @Jonsson2016 evaluation of different methods for whole metagenome sequencing  
     - Compared ROC for simulated datasets  
     - sampled datasets and provided truth set for differentially abundant genes by replacing count values using a binomial distribution with $1/q$ where $q$ is defined as the effect size.  
+* @anders2010differential
+    - A key issue with differential expression and differential abundance methods (high thoughout assays in general) is controling for high false positive rates due the multiple tests.  
+    - Figure 2 diagnostic plot for evaluating false postive rate (Type-I) error, with p value plotted against empirical CDF, the expectation is that the empirical CDF will have a linear relationship with p value (slope 1, intercept 0). 
+    Lines above expectation represent higher than expected Type-I error rate based on defined $\a$ and below lower than expected type-I error rate. 
+    Low type-I error rate results in higher type-II error rate and lower power or ability to correctly reject the null hypothesis.
+    
+* @love2014moderated - method developed for RNAseq but has been applied to 16S @mcurdie2014waste  
+    - used simuated datasets to evaluate sensitivity and false discovery rate for different sample and effect size (Figure 6)  
+    - Used real data with evaluation and verification datasets, example dataset have 10 and 11 replicates for case and control respecitively.   
+    Randomly split into evaluation and verification datasets with 7/8 and 3/3 replicates, with 30 replicates. 
+    Rotated algorithm used in verification.
+    Approach used instead of consensus or single method as to not bias single or group of algorithms.
+* @mcmurdie2014waste compared differential abundance detection methods in conjunction with different normalization methods  
+    - Simulated OTU differences for read datasets by perturbing OTUs to have defined effect sizes between treatment and control conditions.  
+
 
 ### ecological diversity  

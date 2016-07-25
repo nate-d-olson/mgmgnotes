@@ -290,9 +290,14 @@ Assign clusters a taxonomic name
     - Effect size, sample size, abundance  
 * See @Jonsson2016 for summary of different methods  
 * Overview of different methods and approaches  
-    - Statistical distributions   
+    - Statistical distributions  
+        + DESeq2 and DESeq use a negative binomal along with shrinkage methods for estimates @love2014moderated
+            * use Bayesian method for shrinkage which is robust to outliers.
     - Normalization methods   
-    - Transformations   
+    - Transformations 
+        + DESeq2 using a regulaized logarithm transformation, similar to $log2$ transformation but addresses issue with noise for low count values, method applies the same shrinkage approach to that used for estimating count dispersion and log fold change.
+* Key difference between methods is how the count distributions are modeled, specificially how the distribution parameters e.g. mean, standard deviation, and fold change (between conditions) are estimated from the observed data.
+
 
 ### Alpha Diversity  
 
