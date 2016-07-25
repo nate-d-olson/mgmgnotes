@@ -140,9 +140,9 @@ Using a mock community of 68 organisms @Amore2016 showed that increasing the num
 
 @Yu2015 compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and $\beta$ diversity.   
 
-#### sequence copy abundance  
+#### Sequence Copy Abundance  
 
-####chimeras  
+#### Chimeras  
 
 ### Library Preparation  
 
@@ -292,7 +292,7 @@ Assign clusters a taxonomic name
 * Overview of different methods and approaches  
     - Statistical distributions   
     - Normalization methods   
-    - Transformantions   
+    - Transformations   
 
 ### Alpha Diversity  
 
