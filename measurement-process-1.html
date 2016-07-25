@@ -8,7 +8,7 @@
   <title>Measurement Science of Metagenomics</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Measurement Science of Metagenomics">
-  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.1.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="Measurement Science of Metagenomics" />
   <meta property="og:type" content="book" />
@@ -114,21 +114,13 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.2.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#otu-assignment-1"><i class="fa fa-check"></i><b>5.2.3</b> OTU Assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#downstream-analysis-1"><i class="fa fa-check"></i><b>5.3</b> Downstream analysis</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#taxonomic-classification"><i class="fa fa-check"></i><b>5.3.1</b> taxonomic classification</a></li>
-<li class="chapter" data-level="5.3.2" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#differential-abundance-1"><i class="fa fa-check"></i><b>5.3.2</b> differential abundance</a></li>
-<li class="chapter" data-level="5.3.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#ecological-diversity"><i class="fa fa-check"></i><b>5.3.3</b> ecological diversity</a></li>
+<li class="chapter" data-level="5.3.1" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#transformations"><i class="fa fa-check"></i><b>5.3.1</b> Transformations</a></li>
+<li class="chapter" data-level="5.3.2" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#taxonomic-classification"><i class="fa fa-check"></i><b>5.3.2</b> taxonomic classification</a></li>
+<li class="chapter" data-level="5.3.3" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#differential-abundance-1"><i class="fa fa-check"></i><b>5.3.3</b> Differential Abundance</a></li>
+<li class="chapter" data-level="5.3.4" data-path="s-rrna-analysis-method-assessment.html"><a href="s-rrna-analysis-method-assessment.html#ecological-diversity"><i class="fa fa-check"></i><b>5.3.4</b> ecological diversity</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="mixture-study.html"><a href="mixture-study.html"><i class="fa fa-check"></i><b>6</b> Mixture Study</a><ul>
-<li class="chapter" data-level="6.1" data-path="mixture-study.html"><a href="mixture-study.html#part-i---development-and-characterization-of-dataset"><i class="fa fa-check"></i><b>6.1</b> Part I - Development and Characterization of Dataset</a></li>
-<li class="chapter" data-level="6.2" data-path="mixture-study.html"><a href="mixture-study.html#part-ii-sensitivity-analysis"><i class="fa fa-check"></i><b>6.2</b> Part II Sensitivity Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html"><i class="fa fa-check"></i><b>7</b> Ecological Diversity Robustness</a><ul>
-<li class="chapter" data-level="7.1" data-path="ecological-diversity-robustness.html"><a href="ecological-diversity-robustness.html#overview"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="gold-standard-pipeline.html"><a href="gold-standard-pipeline.html"><i class="fa fa-check"></i><b>8</b> Gold Standard Pipeline</a></li>
-<li class="chapter" data-level="9" data-path="assessment-framework.html"><a href="assessment-framework.html"><i class="fa fa-check"></i><b>9</b> Assessment Framework</a></li>
-<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+<li class="chapter" data-level="6" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>6</b> References</a></li>
 <li class="divider"></li>
 <li><a href="https://www.somewebsite.com" target="blank">Published with N8O</a></li>
 
@@ -303,10 +295,10 @@ Figure 4.2: Causes (branch labels) of bias and variability indicated for differe
 <p><span class="citation">Yu et al. (<a href="#ref-Yu2015">2015</a>)</span> compared standard and nest PCR (barcodes used in the second round), showed that the number of cycles and use of separate PCR and indexing reactions influenced the number of observed OTUs and <span class="math inline">\(\beta\)</span> diversity.</p>
 </div>
 <div id="sequence-copy-abundance" class="section level4">
-<h4><span class="header-section-number">4.1.3.7</span> sequence copy abundance</h4>
+<h4><span class="header-section-number">4.1.3.7</span> Sequence Copy Abundance</h4>
 </div>
 <div id="chimeras" class="section level4">
-<h4><span class="header-section-number">4.1.3.8</span> chimeras</h4>
+<h4><span class="header-section-number">4.1.3.8</span> Chimeras</h4>
 </div>
 </div>
 <div id="library-preparation" class="section level3">
@@ -575,12 +567,21 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 </li>
 <li>Overview of different methods and approaches
 <ul>
-<li>Statistical distributions<br />
-</li>
+<li>Statistical distributions
+<ul>
+<li>DESeq2 and DESeq use a negative binomal along with shrinkage methods for estimates <span class="citation">Love, Huber, and Anders (<a href="#ref-love2014moderated">2014</a>)</span>
+<ul>
+<li>use Bayesian method for shrinkage which is robust to outliers.</li>
+</ul></li>
+</ul></li>
 <li>Normalization methods<br />
 </li>
-<li>Transformantions</li>
+<li>Transformations
+<ul>
+<li>DESeq2 using a regulaized logarithm transformation, similar to <span class="math inline">\(log2\)</span> transformation but addresses issue with noise for low count values, method applies the same shrinkage approach to that used for estimating count dispersion and log fold change.</li>
 </ul></li>
+</ul></li>
+<li>Key difference between methods is how the count distributions are modeled, specificially how the distribution parameters e.g. mean, standard deviation, and fold change (between conditions) are estimated from the observed data.</li>
 </ul>
 </div>
 <div id="alpha-diversity" class="section level3">
@@ -718,6 +719,9 @@ _ Additional algorithms available; ea utils fastqJoin, FLASH, PEAR, RDP, STICH, 
 </div>
 <div id="ref-Jonsson2016">
 <p>Jonsson, Viktor, Tobias Österlund, Olle Nerman, and Erik Kristiansson. 2016. “Statistical evaluation of methods for identification of differentially abundant genes in comparative metagenomics.” <em>BMC Genomics</em> 17 (1). BioMed Central: 78. doi:<a href="https://doi.org/10.1186/s12864-016-2386-y">10.1186/s12864-016-2386-y</a>.</p>
+</div>
+<div id="ref-love2014moderated">
+<p>Love, Michael I, Wolfgang Huber, and Simon Anders. 2014. “Moderated Estimation of Fold Change and Dispersion for RNA-Seq Data with DESeq2.” <em>Genome Biology</em> 15 (12). BioMed Central: 1.</p>
 </div>
 <div id="ref-Chao2014">
 <p>Chao, Anne, Nicholas J. Gotelli, T. C. Hsieh, Elizabeth L. Sander, K. H. Ma, Robert K. Colwell, and Aaron M. Ellison. 2014. “Rarefaction and extrapolation with Hill numbers: A framework for sampling and estimation in species diversity studies.” <em>Ecological Monographs</em> 84 (1): 45–67. doi:<a href="https://doi.org/10.1890/13-0133.1">10.1890/13-0133.1</a>.</p>
