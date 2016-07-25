@@ -4,9 +4,5 @@ rmd_files: [
   "10-Assessment-Methods.Rmd",
   "20-Measurement-Process.Rmd",
   "30-Method-Assessment.Rmd",
-  "40-Mixture-Study.Rmd",
-  "50-Diversity-Metric-Robustness.Rmd",
-  "60-Golden-Pipeline.Rmd",
-  "70-Assessment-Framework.Rmd",
-  "80-References.Rmd"
+  "40-References.Rmd"
 ]
