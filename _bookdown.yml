@@ -1,3 +1,7 @@
+edit:
+  link: https://github.com/nate-d-olson/mgmgnotes/%s
+  text: "Edit"
+
 rmd_files: [
   "index.Rmd",
   "00-16SrRNA-Gene.Rmd",
